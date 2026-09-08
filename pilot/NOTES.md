@@ -24,3 +24,16 @@
 - Day 3:IP-Adapter + 双参考图 → 第一张带身份的 1 步图
 - Day 4:DINOv2 + ArcFace 评测脚本 → 加密网格衰减曲线
 - Day 5–6:+ SDXL-Turbo + Hyper-SD → 三曲线叠图
+
+## Day-3 观察(2026-09-08,LCM-LoRA + IP-Adapter sdxl,scale 0.6,w=1)
+
+参考:person.jpeg(StyleGAN2 合成脸)、dog.jpg(柯基,橙红墙背景)。步数 [8,6,4,3,2,1],prompt "a photo of a {subject} wearing sunglasses, on a beach"。
+
+- **身份也分粗细,丢失不对称在身份层面确认**:
+  - Woman(身份=五官精细几何):8≈4 中等保持 → 2 软化 → 1 崩塌(五官糊、噪声覆盖),属性(墨镜/长发/沙滩)全部存活
+  - Dog(身份=毛色+耳形等粗特征):8 很好 → 1 仍是同一只柯基,只是糊
+  - **预言(Day 4 验证)**:ArcFace(woman) 在 2→1 陡降;DINOv2(dog) 缓降
+- **第三类纠缠:参考图上下文泄漏**。参考图橙红墙 → 生成图狗脖子上出现橙红围巾(prompt/参考图均无围巾)。IP-Adapter 全局 CLIP 特征把背景色当主体特征注入。与 H1(attention 无法定位)相关。
+- **人脸临界步数初判 2→1 之间**;加密网格 + 指标后定。
+- **方法论:墨镜遮眼会压低 ArcFace 绝对值(与步数无关)**。Day 4 加中性 prompt 对照("a photo of a {subject}")分离"属性导致"与"步数导致"的下降。
+- 基础版 ip-adapter_sdxl(CLIP 全局特征)身份保持本就弱于 FaceID/InstantID/PuLID,4 步 0.6 的中等水平是 baseline 起点,不是问题。
