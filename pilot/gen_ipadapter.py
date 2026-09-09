@@ -17,7 +17,7 @@ pipe.load_lora_weights("latent-consistency/lcm-lora-sdxl")
 
 pipe.load_ip_adapter("h94/IP-Adapter", subfolder='sdxl_models', weight_name='ip-adapter_sdxl.bin')
 pipe.set_ip_adapter_scale(0.6)
-print(type(list(pipe.unet.attn_processors.values())[0]).__name__)
+
 
 
 refs = {'woman':'person.jpeg', 'dog':'dog.jpg'}

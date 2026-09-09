@@ -81,3 +81,9 @@
 - DINO 两主体在误差带内均无悬崖。
 - 图:`outputs/curve_ipa.png`(3-seed 主线 + 中性组单 seed 虚线);旧单 seed 版存 `curve_ipa_single_seed.png`。
 - 附件包(教授面谈):curve_ipa.png + grid_ipa.png(Mac 上拼)+ research_summary.html→PDF(Mac,`DriftPaper/06_교수면담/`)。
+
+## H1 起步(2026-09-09 晚)
+- `pilot/h1/h1_atten.py`:换 `IPAdapterAttnProcessor2_0` → classic `IPAdapterAttnProcessor`(70 层,像素差均值 0.22/255,数学等价),钩 `batch_to_head_dim` 抓每层每步的 (text_out, ip_out),形状 (1, HW, C)。4 步 → 每层 4 次。
+- **概念注意**:`ip_attention_probs` 的 softmax 是对 4 个 image token 做的(每像素和为 1),不是空间分布,不能直接当热图。空间注入强度用 `‖ip_out‖/(‖ip_out‖+‖text_out‖)` 逐像素定义。
+- 明天:注入热图(8 步 vs 1 步)+ 脸 bbox 内占比。
+- 已跑完 step [8,6,4,3,2,1] × seed [42,43,44] 的范数捕获 → `outputs/h1/norms_step{s}_seed{k}.pt`(每层每步 (text_norm, ip_norm),各 (HW,))+ 对应生成图。明天:注入比热图 + 脸 bbox 占比曲线 vs ArcFace 曲线并排。
