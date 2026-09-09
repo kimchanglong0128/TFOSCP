@@ -1,0 +1,167 @@
+{
+  "scheme": "T_furtile_t999",
+  "note": "texture-only anchor 'furtile' at t999",
+  "requirement": {
+    "arcface_min": 0.069,
+    "dino_max": 0.6
+  },
+  "passed": false,
+  "vram_gb": 15.28,
+  "per_seed": {
+    "baseline": [
+      {
+        "seed": 42,
+        "path": "/workspace/exp/T/T_furtile_t999/baseline_seed42.png",
+        "dino": 0.33327674865722656,
+        "arcface": 0.014804786071181297
+      },
+      {
+        "seed": 43,
+        "path": "/workspace/exp/T/T_furtile_t999/baseline_seed43.png",
+        "dino": 0.3743821978569031,
+        "arcface": -0.11036460846662521
+      },
+      {
+        "seed": 44,
+        "path": "/workspace/exp/T/T_furtile_t999/baseline_seed44.png",
+        "dino": 0.42794686555862427,
+        "arcface": -0.08326953649520874
+      },
+      {
+        "seed": 45,
+        "path": "/workspace/exp/T/T_furtile_t999/baseline_seed45.png",
+        "dino": 0.3125556707382202,
+        "arcface": -0.052337419241666794
+      },
+      {
+        "seed": 46,
+        "path": "/workspace/exp/T/T_furtile_t999/baseline_seed46.png",
+        "dino": 0.415629118680954,
+        "arcface": 0.03912344574928284
+      },
+      {
+        "seed": 47,
+        "path": "/workspace/exp/T/T_furtile_t999/baseline_seed47.png",
+        "dino": 0.5056430697441101,
+        "arcface": -0.04080753028392792
+      },
+      {
+        "seed": 48,
+        "path": "/workspace/exp/T/T_furtile_t999/baseline_seed48.png",
+        "dino": 0.5916143655776978,
+        "arcface": 0.03997143357992172
+      },
+      {
+        "seed": 49,
+        "path": "/workspace/exp/T/T_furtile_t999/baseline_seed49.png",
+        "dino": 0.40818893909454346,
+        "arcface": 0.01869330182671547
+      },
+      {
+        "seed": 50,
+        "path": "/workspace/exp/T/T_furtile_t999/baseline_seed50.png",
+        "dino": 0.3423282504081726,
+        "arcface": -0.004462822340428829
+      },
+      {
+        "seed": 51,
+        "path": "/workspace/exp/T/T_furtile_t999/baseline_seed51.png",
+        "dino": 0.4985085129737854,
+        "arcface": 0.05985785648226738
+      }
+    ],
+    "T_furtile_t999": [
+      {
+        "seed": 42,
+        "path": "/workspace/exp/T/T_furtile_t999/T_furtile_t999_seed42.png",
+        "dino": 0.34530729055404663,
+        "arcface": 0.07239939272403717
+      },
+      {
+        "seed": 43,
+        "path": "/workspace/exp/T/T_furtile_t999/T_furtile_t999_seed43.png",
+        "dino": 0.3414684236049652,
+        "arcface": -0.010165425017476082
+      },
+      {
+        "seed": 44,
+        "path": "/workspace/exp/T/T_furtile_t999/T_furtile_t999_seed44.png",
+        "dino": 0.4100540280342102,
+        "arcface": -0.09414473176002502
+      },
+      {
+        "seed": 45,
+        "path": "/workspace/exp/T/T_furtile_t999/T_furtile_t999_seed45.png",
+        "dino": 0.34601637721061707,
+        "arcface": -0.0060064904391765594
+      },
+      {
+        "seed": 46,
+        "path": "/workspace/exp/T/T_furtile_t999/T_furtile_t999_seed46.png",
+        "dino": 0.38092660903930664,
+        "arcface": 0.06735994666814804
+      },
+      {
+        "seed": 47,
+        "path": "/workspace/exp/T/T_furtile_t999/T_furtile_t999_seed47.png",
+        "dino": 0.5071508884429932,
+        "arcface": -0.058349937200546265
+      },
+      {
+        "seed": 48,
+        "path": "/workspace/exp/T/T_furtile_t999/T_furtile_t999_seed48.png",
+        "dino": 0.5934540033340454,
+        "arcface": 0.0730089545249939
+      },
+      {
+        "seed": 49,
+        "path": "/workspace/exp/T/T_furtile_t999/T_furtile_t999_seed49.png",
+        "dino": 0.3903295397758484,
+        "arcface": 0.007284339517354965
+      },
+      {
+        "seed": 50,
+        "path": "/workspace/exp/T/T_furtile_t999/T_furtile_t999_seed50.png",
+        "dino": 0.2721622586250305,
+        "arcface": 0.06859331578016281
+      },
+      {
+        "seed": 51,
+        "path": "/workspace/exp/T/T_furtile_t999/T_furtile_t999_seed51.png",
+        "dino": 0.4952390789985657,
+        "arcface": 0.13044989109039307
+      }
+    ]
+  },
+  "summary": {
+    "baseline": {
+      "dino": {
+        "mean": 0.42100737392902376,
+        "std": 0.08840595358363018,
+        "n_nan": 0
+      },
+      "arcface": {
+        "mean": -0.011879109311848879,
+        "std": 0.057161905156284686,
+        "n_nan": 0
+      }
+    },
+    "T_furtile_t999": {
+      "dino": {
+        "mean": 0.40821084976196287,
+        "std": 0.09634107177972648,
+        "n_nan": 0
+      },
+      "arcface": {
+        "mean": 0.025042925588786603,
+        "std": 0.06913794491401147,
+        "n_nan": 0
+      }
+    }
+  },
+  "delta_vs_baseline": {
+    "dino": -0.012796524167060896,
+    "arcface": 0.03692203490063548
+  },
+  "timestamp": "2026-09-09 22:41:44"
+}

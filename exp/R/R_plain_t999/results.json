@@ -1,0 +1,167 @@
+{
+  "scheme": "R_plain_t999",
+  "note": "synthetic anchor 'plain' at t999",
+  "requirement": {
+    "arcface_min": 0.069,
+    "dino_max": 0.6
+  },
+  "passed": false,
+  "vram_gb": 15.28,
+  "per_seed": {
+    "baseline": [
+      {
+        "seed": 42,
+        "path": "/workspace/exp/R/R_plain_t999/baseline_seed42.png",
+        "dino": 0.33327674865722656,
+        "arcface": 0.014804786071181297
+      },
+      {
+        "seed": 43,
+        "path": "/workspace/exp/R/R_plain_t999/baseline_seed43.png",
+        "dino": 0.3743821978569031,
+        "arcface": -0.11036460846662521
+      },
+      {
+        "seed": 44,
+        "path": "/workspace/exp/R/R_plain_t999/baseline_seed44.png",
+        "dino": 0.42794686555862427,
+        "arcface": -0.08326953649520874
+      },
+      {
+        "seed": 45,
+        "path": "/workspace/exp/R/R_plain_t999/baseline_seed45.png",
+        "dino": 0.3125556707382202,
+        "arcface": -0.052337419241666794
+      },
+      {
+        "seed": 46,
+        "path": "/workspace/exp/R/R_plain_t999/baseline_seed46.png",
+        "dino": 0.415629118680954,
+        "arcface": 0.03912344574928284
+      },
+      {
+        "seed": 47,
+        "path": "/workspace/exp/R/R_plain_t999/baseline_seed47.png",
+        "dino": 0.5056430697441101,
+        "arcface": -0.04080753028392792
+      },
+      {
+        "seed": 48,
+        "path": "/workspace/exp/R/R_plain_t999/baseline_seed48.png",
+        "dino": 0.5916143655776978,
+        "arcface": 0.03997143357992172
+      },
+      {
+        "seed": 49,
+        "path": "/workspace/exp/R/R_plain_t999/baseline_seed49.png",
+        "dino": 0.40818893909454346,
+        "arcface": 0.01869330182671547
+      },
+      {
+        "seed": 50,
+        "path": "/workspace/exp/R/R_plain_t999/baseline_seed50.png",
+        "dino": 0.3423282504081726,
+        "arcface": -0.004462822340428829
+      },
+      {
+        "seed": 51,
+        "path": "/workspace/exp/R/R_plain_t999/baseline_seed51.png",
+        "dino": 0.4985085129737854,
+        "arcface": 0.05985785648226738
+      }
+    ],
+    "R_plain_t999": [
+      {
+        "seed": 42,
+        "path": "/workspace/exp/R/R_plain_t999/R_plain_t999_seed42.png",
+        "dino": 0.4095037877559662,
+        "arcface": 0.05953073501586914
+      },
+      {
+        "seed": 43,
+        "path": "/workspace/exp/R/R_plain_t999/R_plain_t999_seed43.png",
+        "dino": 0.477784663438797,
+        "arcface": 0.015474017709493637
+      },
+      {
+        "seed": 44,
+        "path": "/workspace/exp/R/R_plain_t999/R_plain_t999_seed44.png",
+        "dino": 0.3857923746109009,
+        "arcface": -0.05439333617687225
+      },
+      {
+        "seed": 45,
+        "path": "/workspace/exp/R/R_plain_t999/R_plain_t999_seed45.png",
+        "dino": 0.33560824394226074,
+        "arcface": -0.05202838033437729
+      },
+      {
+        "seed": 46,
+        "path": "/workspace/exp/R/R_plain_t999/R_plain_t999_seed46.png",
+        "dino": 0.35526159405708313,
+        "arcface": -0.05089657008647919
+      },
+      {
+        "seed": 47,
+        "path": "/workspace/exp/R/R_plain_t999/R_plain_t999_seed47.png",
+        "dino": 0.42322349548339844,
+        "arcface": -0.14313767850399017
+      },
+      {
+        "seed": 48,
+        "path": "/workspace/exp/R/R_plain_t999/R_plain_t999_seed48.png",
+        "dino": 0.45652514696121216,
+        "arcface": 0.03948458284139633
+      },
+      {
+        "seed": 49,
+        "path": "/workspace/exp/R/R_plain_t999/R_plain_t999_seed49.png",
+        "dino": 0.45354700088500977,
+        "arcface": -0.0039165690541267395
+      },
+      {
+        "seed": 50,
+        "path": "/workspace/exp/R/R_plain_t999/R_plain_t999_seed50.png",
+        "dino": 0.35578036308288574,
+        "arcface": -0.04057472571730614
+      },
+      {
+        "seed": 51,
+        "path": "/workspace/exp/R/R_plain_t999/R_plain_t999_seed51.png",
+        "dino": 0.4725763499736786,
+        "arcface": 0.004158814437687397
+      }
+    ]
+  },
+  "summary": {
+    "baseline": {
+      "dino": {
+        "mean": 0.42100737392902376,
+        "std": 0.08840595358363018,
+        "n_nan": 0
+      },
+      "arcface": {
+        "mean": -0.011879109311848879,
+        "std": 0.057161905156284686,
+        "n_nan": 0
+      }
+    },
+    "R_plain_t999": {
+      "dino": {
+        "mean": 0.41256030201911925,
+        "std": 0.05242693430269157,
+        "n_nan": 0
+      },
+      "arcface": {
+        "mean": -0.022629910986870526,
+        "std": 0.0583520389603687,
+        "n_nan": 0
+      }
+    }
+  },
+  "delta_vs_baseline": {
+    "dino": -0.008447071909904513,
+    "arcface": -0.010750801675021647
+  },
+  "timestamp": "2026-09-09 22:33:21"
+}

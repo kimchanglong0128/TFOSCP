@@ -1,0 +1,167 @@
+{
+  "scheme": "P_dog_t899_s0.9",
+  "note": "dog anchor t=899 (amp 0.120) + ip scale 0.9; baseline = pure noise 1-step at same scale",
+  "requirement": {
+    "arcface_min": 0.069,
+    "dino_max": 0.6
+  },
+  "passed": false,
+  "vram_gb": 15.28,
+  "per_seed": {
+    "baseline": [
+      {
+        "seed": 42,
+        "path": "/workspace/exp/P/P_dog_t899_s0.9/baseline_seed42.png",
+        "dino": 0.7352059483528137,
+        "arcface": 0.06185178458690643
+      },
+      {
+        "seed": 43,
+        "path": "/workspace/exp/P/P_dog_t899_s0.9/baseline_seed43.png",
+        "dino": 0.6105910539627075,
+        "arcface": -0.04652097821235657
+      },
+      {
+        "seed": 44,
+        "path": "/workspace/exp/P/P_dog_t899_s0.9/baseline_seed44.png",
+        "dino": 0.6927695274353027,
+        "arcface": 0.08213446289300919
+      },
+      {
+        "seed": 45,
+        "path": "/workspace/exp/P/P_dog_t899_s0.9/baseline_seed45.png",
+        "dino": 0.7515307068824768,
+        "arcface": 0.015318158082664013
+      },
+      {
+        "seed": 46,
+        "path": "/workspace/exp/P/P_dog_t899_s0.9/baseline_seed46.png",
+        "dino": 0.716363787651062,
+        "arcface": 0.04932790994644165
+      },
+      {
+        "seed": 47,
+        "path": "/workspace/exp/P/P_dog_t899_s0.9/baseline_seed47.png",
+        "dino": 0.7298784852027893,
+        "arcface": 0.039821844547986984
+      },
+      {
+        "seed": 48,
+        "path": "/workspace/exp/P/P_dog_t899_s0.9/baseline_seed48.png",
+        "dino": 0.6606754660606384,
+        "arcface": 0.005577218718826771
+      },
+      {
+        "seed": 49,
+        "path": "/workspace/exp/P/P_dog_t899_s0.9/baseline_seed49.png",
+        "dino": 0.7126873135566711,
+        "arcface": -0.016443707048892975
+      },
+      {
+        "seed": 50,
+        "path": "/workspace/exp/P/P_dog_t899_s0.9/baseline_seed50.png",
+        "dino": 0.6542649269104004,
+        "arcface": -0.009960733354091644
+      },
+      {
+        "seed": 51,
+        "path": "/workspace/exp/P/P_dog_t899_s0.9/baseline_seed51.png",
+        "dino": 0.7531957626342773,
+        "arcface": 0.07499562203884125
+      }
+    ],
+    "P_dog_t899_s0.9": [
+      {
+        "seed": 42,
+        "path": "/workspace/exp/P/P_dog_t899_s0.9/P_dog_t899_s0.9_seed42.png",
+        "dino": 0.5664823055267334,
+        "arcface": -0.018674345687031746
+      },
+      {
+        "seed": 43,
+        "path": "/workspace/exp/P/P_dog_t899_s0.9/P_dog_t899_s0.9_seed43.png",
+        "dino": 0.7166033387184143,
+        "arcface": 0.19872210919857025
+      },
+      {
+        "seed": 44,
+        "path": "/workspace/exp/P/P_dog_t899_s0.9/P_dog_t899_s0.9_seed44.png",
+        "dino": 0.6619119048118591,
+        "arcface": 0.05845356732606888
+      },
+      {
+        "seed": 45,
+        "path": "/workspace/exp/P/P_dog_t899_s0.9/P_dog_t899_s0.9_seed45.png",
+        "dino": 0.5755748748779297,
+        "arcface": 0.07865975052118301
+      },
+      {
+        "seed": 46,
+        "path": "/workspace/exp/P/P_dog_t899_s0.9/P_dog_t899_s0.9_seed46.png",
+        "dino": 0.606162428855896,
+        "arcface": 0.09253060817718506
+      },
+      {
+        "seed": 47,
+        "path": "/workspace/exp/P/P_dog_t899_s0.9/P_dog_t899_s0.9_seed47.png",
+        "dino": 0.596260666847229,
+        "arcface": 0.03312898799777031
+      },
+      {
+        "seed": 48,
+        "path": "/workspace/exp/P/P_dog_t899_s0.9/P_dog_t899_s0.9_seed48.png",
+        "dino": 0.48431119322776794,
+        "arcface": 0.1695650815963745
+      },
+      {
+        "seed": 49,
+        "path": "/workspace/exp/P/P_dog_t899_s0.9/P_dog_t899_s0.9_seed49.png",
+        "dino": 0.681663990020752,
+        "arcface": 0.19057050347328186
+      },
+      {
+        "seed": 50,
+        "path": "/workspace/exp/P/P_dog_t899_s0.9/P_dog_t899_s0.9_seed50.png",
+        "dino": 0.7057535648345947,
+        "arcface": 0.18087729811668396
+      },
+      {
+        "seed": 51,
+        "path": "/workspace/exp/P/P_dog_t899_s0.9/P_dog_t899_s0.9_seed51.png",
+        "dino": 0.4271520972251892,
+        "arcface": -0.03171221911907196
+      }
+    ]
+  },
+  "summary": {
+    "baseline": {
+      "dino": {
+        "mean": 0.701716297864914,
+        "std": 0.04678678056948589,
+        "n_nan": 0
+      },
+      "arcface": {
+        "mean": 0.02561015821993351,
+        "std": 0.04276010731546107,
+        "n_nan": 0
+      }
+    },
+    "P_dog_t899_s0.9": {
+      "dino": {
+        "mean": 0.6021876364946366,
+        "std": 0.09443790846230855,
+        "n_nan": 0
+      },
+      "arcface": {
+        "mean": 0.09521213416010141,
+        "std": 0.08643624345585786,
+        "n_nan": 0
+      }
+    }
+  },
+  "delta_vs_baseline": {
+    "dino": -0.09952866137027738,
+    "arcface": 0.0696019759401679
+  },
+  "timestamp": "2026-09-09 22:29:00"
+}

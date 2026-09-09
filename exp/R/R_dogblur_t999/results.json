@@ -1,0 +1,167 @@
+{
+  "scheme": "R_dogblur_t999",
+  "note": "synthetic anchor 'dogblur' at t999",
+  "requirement": {
+    "arcface_min": 0.069,
+    "dino_max": 0.6
+  },
+  "passed": false,
+  "vram_gb": 15.28,
+  "per_seed": {
+    "baseline": [
+      {
+        "seed": 42,
+        "path": "/workspace/exp/R/R_dogblur_t999/baseline_seed42.png",
+        "dino": 0.33327674865722656,
+        "arcface": 0.014804786071181297
+      },
+      {
+        "seed": 43,
+        "path": "/workspace/exp/R/R_dogblur_t999/baseline_seed43.png",
+        "dino": 0.3743821978569031,
+        "arcface": -0.11036460846662521
+      },
+      {
+        "seed": 44,
+        "path": "/workspace/exp/R/R_dogblur_t999/baseline_seed44.png",
+        "dino": 0.42794686555862427,
+        "arcface": -0.08326953649520874
+      },
+      {
+        "seed": 45,
+        "path": "/workspace/exp/R/R_dogblur_t999/baseline_seed45.png",
+        "dino": 0.3125556707382202,
+        "arcface": -0.052337419241666794
+      },
+      {
+        "seed": 46,
+        "path": "/workspace/exp/R/R_dogblur_t999/baseline_seed46.png",
+        "dino": 0.415629118680954,
+        "arcface": 0.03912344574928284
+      },
+      {
+        "seed": 47,
+        "path": "/workspace/exp/R/R_dogblur_t999/baseline_seed47.png",
+        "dino": 0.5056430697441101,
+        "arcface": -0.04080753028392792
+      },
+      {
+        "seed": 48,
+        "path": "/workspace/exp/R/R_dogblur_t999/baseline_seed48.png",
+        "dino": 0.5916143655776978,
+        "arcface": 0.03997143357992172
+      },
+      {
+        "seed": 49,
+        "path": "/workspace/exp/R/R_dogblur_t999/baseline_seed49.png",
+        "dino": 0.40818893909454346,
+        "arcface": 0.01869330182671547
+      },
+      {
+        "seed": 50,
+        "path": "/workspace/exp/R/R_dogblur_t999/baseline_seed50.png",
+        "dino": 0.3423282504081726,
+        "arcface": -0.004462822340428829
+      },
+      {
+        "seed": 51,
+        "path": "/workspace/exp/R/R_dogblur_t999/baseline_seed51.png",
+        "dino": 0.4985085129737854,
+        "arcface": 0.05985785648226738
+      }
+    ],
+    "R_dogblur_t999": [
+      {
+        "seed": 42,
+        "path": "/workspace/exp/R/R_dogblur_t999/R_dogblur_t999_seed42.png",
+        "dino": 0.4833484888076782,
+        "arcface": 0.16892766952514648
+      },
+      {
+        "seed": 43,
+        "path": "/workspace/exp/R/R_dogblur_t999/R_dogblur_t999_seed43.png",
+        "dino": 0.49222472310066223,
+        "arcface": -0.024055005982518196
+      },
+      {
+        "seed": 44,
+        "path": "/workspace/exp/R/R_dogblur_t999/R_dogblur_t999_seed44.png",
+        "dino": 0.5116498470306396,
+        "arcface": 0.04135359078645706
+      },
+      {
+        "seed": 45,
+        "path": "/workspace/exp/R/R_dogblur_t999/R_dogblur_t999_seed45.png",
+        "dino": 0.4259013831615448,
+        "arcface": 0.024329911917448044
+      },
+      {
+        "seed": 46,
+        "path": "/workspace/exp/R/R_dogblur_t999/R_dogblur_t999_seed46.png",
+        "dino": 0.5803791880607605,
+        "arcface": 0.004383379593491554
+      },
+      {
+        "seed": 47,
+        "path": "/workspace/exp/R/R_dogblur_t999/R_dogblur_t999_seed47.png",
+        "dino": 0.5792601108551025,
+        "arcface": -0.03700456768274307
+      },
+      {
+        "seed": 48,
+        "path": "/workspace/exp/R/R_dogblur_t999/R_dogblur_t999_seed48.png",
+        "dino": 0.41535305976867676,
+        "arcface": 0.007928932085633278
+      },
+      {
+        "seed": 49,
+        "path": "/workspace/exp/R/R_dogblur_t999/R_dogblur_t999_seed49.png",
+        "dino": 0.6527915000915527,
+        "arcface": 0.06805800646543503
+      },
+      {
+        "seed": 50,
+        "path": "/workspace/exp/R/R_dogblur_t999/R_dogblur_t999_seed50.png",
+        "dino": 0.5412142872810364,
+        "arcface": 0.08625929057598114
+      },
+      {
+        "seed": 51,
+        "path": "/workspace/exp/R/R_dogblur_t999/R_dogblur_t999_seed51.png",
+        "dino": 0.34408366680145264,
+        "arcface": -0.030936621129512787
+      }
+    ]
+  },
+  "summary": {
+    "baseline": {
+      "dino": {
+        "mean": 0.42100737392902376,
+        "std": 0.08840595358363018,
+        "n_nan": 0
+      },
+      "arcface": {
+        "mean": -0.011879109311848879,
+        "std": 0.057161905156284686,
+        "n_nan": 0
+      }
+    },
+    "R_dogblur_t999": {
+      "dino": {
+        "mean": 0.5026206254959107,
+        "std": 0.09138272472297022,
+        "n_nan": 0
+      },
+      "arcface": {
+        "mean": 0.030924458615481855,
+        "std": 0.06353922280673203,
+        "n_nan": 0
+      }
+    }
+  },
+  "delta_vs_baseline": {
+    "dino": 0.08161325156688692,
+    "arcface": 0.042803567927330734
+  },
+  "timestamp": "2026-09-09 22:33:52"
+}

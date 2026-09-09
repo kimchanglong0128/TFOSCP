@@ -1,0 +1,167 @@
+{
+  "scheme": "S_dog_mask_d1.3",
+  "note": "dog anchor t999 + mask = mean face box of O outputs x1.3",
+  "requirement": {
+    "arcface_min": 0.069,
+    "dino_max": 0.6
+  },
+  "passed": false,
+  "vram_gb": 15.28,
+  "per_seed": {
+    "baseline": [
+      {
+        "seed": 42,
+        "path": "/workspace/exp/S/S_dog_mask_d1.3/baseline_seed42.png",
+        "dino": 0.33327674865722656,
+        "arcface": 0.014804786071181297
+      },
+      {
+        "seed": 43,
+        "path": "/workspace/exp/S/S_dog_mask_d1.3/baseline_seed43.png",
+        "dino": 0.3743821978569031,
+        "arcface": -0.11036460846662521
+      },
+      {
+        "seed": 44,
+        "path": "/workspace/exp/S/S_dog_mask_d1.3/baseline_seed44.png",
+        "dino": 0.42794686555862427,
+        "arcface": -0.08326953649520874
+      },
+      {
+        "seed": 45,
+        "path": "/workspace/exp/S/S_dog_mask_d1.3/baseline_seed45.png",
+        "dino": 0.3125556707382202,
+        "arcface": -0.052337419241666794
+      },
+      {
+        "seed": 46,
+        "path": "/workspace/exp/S/S_dog_mask_d1.3/baseline_seed46.png",
+        "dino": 0.415629118680954,
+        "arcface": 0.03912344574928284
+      },
+      {
+        "seed": 47,
+        "path": "/workspace/exp/S/S_dog_mask_d1.3/baseline_seed47.png",
+        "dino": 0.5056430697441101,
+        "arcface": -0.04080753028392792
+      },
+      {
+        "seed": 48,
+        "path": "/workspace/exp/S/S_dog_mask_d1.3/baseline_seed48.png",
+        "dino": 0.5916143655776978,
+        "arcface": 0.03997143357992172
+      },
+      {
+        "seed": 49,
+        "path": "/workspace/exp/S/S_dog_mask_d1.3/baseline_seed49.png",
+        "dino": 0.40818893909454346,
+        "arcface": 0.01869330182671547
+      },
+      {
+        "seed": 50,
+        "path": "/workspace/exp/S/S_dog_mask_d1.3/baseline_seed50.png",
+        "dino": 0.3423282504081726,
+        "arcface": -0.004462822340428829
+      },
+      {
+        "seed": 51,
+        "path": "/workspace/exp/S/S_dog_mask_d1.3/baseline_seed51.png",
+        "dino": 0.4985085129737854,
+        "arcface": 0.05985785648226738
+      }
+    ],
+    "S_dog_mask_d1.3": [
+      {
+        "seed": 42,
+        "path": "/workspace/exp/S/S_dog_mask_d1.3/S_dog_mask_d1.3_seed42.png",
+        "dino": 0.45591893792152405,
+        "arcface": 0.09550575911998749
+      },
+      {
+        "seed": 43,
+        "path": "/workspace/exp/S/S_dog_mask_d1.3/S_dog_mask_d1.3_seed43.png",
+        "dino": 0.44361579418182373,
+        "arcface": -0.05774370953440666
+      },
+      {
+        "seed": 44,
+        "path": "/workspace/exp/S/S_dog_mask_d1.3/S_dog_mask_d1.3_seed44.png",
+        "dino": 0.4236869215965271,
+        "arcface": 0.035561975091695786
+      },
+      {
+        "seed": 45,
+        "path": "/workspace/exp/S/S_dog_mask_d1.3/S_dog_mask_d1.3_seed45.png",
+        "dino": 0.5081959962844849,
+        "arcface": 0.02331114001572132
+      },
+      {
+        "seed": 46,
+        "path": "/workspace/exp/S/S_dog_mask_d1.3/S_dog_mask_d1.3_seed46.png",
+        "dino": 0.6091219782829285,
+        "arcface": 0.10772131383419037
+      },
+      {
+        "seed": 47,
+        "path": "/workspace/exp/S/S_dog_mask_d1.3/S_dog_mask_d1.3_seed47.png",
+        "dino": 0.3904082775115967,
+        "arcface": 0.05808771774172783
+      },
+      {
+        "seed": 48,
+        "path": "/workspace/exp/S/S_dog_mask_d1.3/S_dog_mask_d1.3_seed48.png",
+        "dino": 0.5071641206741333,
+        "arcface": 0.09396813809871674
+      },
+      {
+        "seed": 49,
+        "path": "/workspace/exp/S/S_dog_mask_d1.3/S_dog_mask_d1.3_seed49.png",
+        "dino": 0.4880930185317993,
+        "arcface": -0.06281338632106781
+      },
+      {
+        "seed": 50,
+        "path": "/workspace/exp/S/S_dog_mask_d1.3/S_dog_mask_d1.3_seed50.png",
+        "dino": 0.39047324657440186,
+        "arcface": 0.09126994758844376
+      },
+      {
+        "seed": 51,
+        "path": "/workspace/exp/S/S_dog_mask_d1.3/S_dog_mask_d1.3_seed51.png",
+        "dino": 0.2829868793487549,
+        "arcface": -0.02524217590689659
+      }
+    ]
+  },
+  "summary": {
+    "baseline": {
+      "dino": {
+        "mean": 0.42100737392902376,
+        "std": 0.08840595358363018,
+        "n_nan": 0
+      },
+      "arcface": {
+        "mean": -0.011879109311848879,
+        "std": 0.057161905156284686,
+        "n_nan": 0
+      }
+    },
+    "S_dog_mask_d1.3": {
+      "dino": {
+        "mean": 0.44996651709079744,
+        "std": 0.08767461417447313,
+        "n_nan": 0
+      },
+      "arcface": {
+        "mean": 0.03596267197281122,
+        "std": 0.06502271333556511,
+        "n_nan": 0
+      }
+    }
+  },
+  "delta_vs_baseline": {
+    "dino": 0.02895914316177367,
+    "arcface": 0.0478417812846601
+  },
+  "timestamp": "2026-09-09 22:37:24"
+}
