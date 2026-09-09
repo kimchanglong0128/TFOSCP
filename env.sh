@@ -5,7 +5,11 @@ export PYTHONUNBUFFERED=1
 [ -e ~/.claude ]      || ln -s /workspace/.claude ~/.claude
 true
 [ -e ~/.claude.json ] || ln -s /workspace/.claude_json ~/.claude.json
+# ~/.config: a fresh container may already hold a real dir (created by VS Code server) -> move it aside first
+if [ -d ~/.config ] && [ ! -L ~/.config ]; then mv ~/.config ~/.config.container.bak.$$; fi
 [ -e ~/.config ]      || ln -s /workspace/.config ~/.config
+# VS Code Remote-SSH injects a GIT_ASKPASS socket that dies with the window; git would hang on it
+unset GIT_ASKPASS VSCODE_GIT_ASKPASS_NODE VSCODE_GIT_ASKPASS_MAIN VSCODE_GIT_ASKPASS_EXTRA_ARGS VSCODE_GIT_IPC_HANDLE
 export PATH=/workspace/.claude_local/bin:$HOME/.local/bin:/workspace/bin:$PATH
 
 # gh (container disk is wiped on stop; reinstall if missing)
