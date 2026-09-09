@@ -1,0 +1,83 @@
+{
+  "scheme": "H_t799",
+  "note": "x_t = sqrt(1-abar_799)*eps = 0.9812*eps, single step at t=799",
+  "requirement": {
+    "arcface_min": 0.111,
+    "dino_max": 0.6
+  },
+  "passed": false,
+  "vram_gb": 15.28,
+  "per_seed": {
+    "baseline": [
+      {
+        "seed": 42,
+        "path": "/workspace/exp/H/H_t799/baseline_seed42.png",
+        "dino": 0.33327674865722656,
+        "arcface": 0.014804786071181297
+      },
+      {
+        "seed": 43,
+        "path": "/workspace/exp/H/H_t799/baseline_seed43.png",
+        "dino": 0.3743821978569031,
+        "arcface": -0.11036460846662521
+      },
+      {
+        "seed": 44,
+        "path": "/workspace/exp/H/H_t799/baseline_seed44.png",
+        "dino": 0.42794686555862427,
+        "arcface": -0.08326953649520874
+      }
+    ],
+    "H_t799": [
+      {
+        "seed": 42,
+        "path": "/workspace/exp/H/H_t799/H_t799_seed42.png",
+        "dino": 0.28960472345352173,
+        "arcface": 0.033526066690683365
+      },
+      {
+        "seed": 43,
+        "path": "/workspace/exp/H/H_t799/H_t799_seed43.png",
+        "dino": 0.36955127120018005,
+        "arcface": 0.008941270411014557
+      },
+      {
+        "seed": 44,
+        "path": "/workspace/exp/H/H_t799/H_t799_seed44.png",
+        "dino": 0.19331303238868713,
+        "arcface": NaN
+      }
+    ]
+  },
+  "summary": {
+    "baseline": {
+      "dino": {
+        "mean": 0.37853527069091797,
+        "std": 0.047471504810828895,
+        "n_nan": 0
+      },
+      "arcface": {
+        "mean": -0.05960978629688422,
+        "std": 0.06585349016434591,
+        "n_nan": 0
+      }
+    },
+    "H_t799": {
+      "dino": {
+        "mean": 0.28415634234746295,
+        "std": 0.08824535595345427,
+        "n_nan": 0
+      },
+      "arcface": {
+        "mean": 0.02123366855084896,
+        "std": 0.017384076163443618,
+        "n_nan": 1
+      }
+    }
+  },
+  "delta_vs_baseline": {
+    "dino": -0.09437892834345502,
+    "arcface": 0.08084345484773317
+  },
+  "timestamp": "2026-09-09 12:31:59"
+}

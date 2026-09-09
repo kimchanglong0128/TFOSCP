@@ -1,0 +1,83 @@
+{
+  "scheme": "L_t999_d1.8",
+  "note": "prior anchor t=999 + IP mask = prior face bbox x1.8",
+  "requirement": {
+    "arcface_min": 0.111,
+    "dino_max": 0.6
+  },
+  "passed": false,
+  "vram_gb": 15.28,
+  "per_seed": {
+    "baseline": [
+      {
+        "seed": 42,
+        "path": "/workspace/exp/L/L_t999_d1.8/baseline_seed42.png",
+        "dino": 0.33327674865722656,
+        "arcface": 0.014804786071181297
+      },
+      {
+        "seed": 43,
+        "path": "/workspace/exp/L/L_t999_d1.8/baseline_seed43.png",
+        "dino": 0.3743821978569031,
+        "arcface": -0.11036460846662521
+      },
+      {
+        "seed": 44,
+        "path": "/workspace/exp/L/L_t999_d1.8/baseline_seed44.png",
+        "dino": 0.42794686555862427,
+        "arcface": -0.08326953649520874
+      }
+    ],
+    "L_t999_d1.8": [
+      {
+        "seed": 42,
+        "path": "/workspace/exp/L/L_t999_d1.8/L_t999_d1.8_seed42.png",
+        "dino": 0.2995874285697937,
+        "arcface": 0.1073162779211998
+      },
+      {
+        "seed": 43,
+        "path": "/workspace/exp/L/L_t999_d1.8/L_t999_d1.8_seed43.png",
+        "dino": 0.31713393330574036,
+        "arcface": -0.04361334815621376
+      },
+      {
+        "seed": 44,
+        "path": "/workspace/exp/L/L_t999_d1.8/L_t999_d1.8_seed44.png",
+        "dino": 0.29906970262527466,
+        "arcface": 0.005823918618261814
+      }
+    ]
+  },
+  "summary": {
+    "baseline": {
+      "dino": {
+        "mean": 0.37853527069091797,
+        "std": 0.047471504810828895,
+        "n_nan": 0
+      },
+      "arcface": {
+        "mean": -0.05960978629688422,
+        "std": 0.06585349016434591,
+        "n_nan": 0
+      }
+    },
+    "L_t999_d1.8": {
+      "dino": {
+        "mean": 0.3052636881669362,
+        "std": 0.010283192586929613,
+        "n_nan": 0
+      },
+      "arcface": {
+        "mean": 0.023175616127749283,
+        "std": 0.07694640382638122,
+        "n_nan": 0
+      }
+    }
+  },
+  "delta_vs_baseline": {
+    "dino": -0.07327158252398175,
+    "arcface": 0.0827854024246335
+  },
+  "timestamp": "2026-09-09 12:44:41"
+}

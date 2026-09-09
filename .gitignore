@@ -2,3 +2,6 @@
 !/pilot
 !/env.sh
 !/.gitignore
+!/exp
+exp/**/*.png
+exp/**/*.pt

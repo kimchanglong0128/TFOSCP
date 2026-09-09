@@ -1,0 +1,83 @@
+{
+  "scheme": "N_p100_t999_s0.9",
+  "note": "prior seed100 t999 + ip scale 0.9",
+  "requirement": {
+    "arcface_min": 0.111,
+    "dino_max": 0.6
+  },
+  "passed": false,
+  "vram_gb": 15.29,
+  "per_seed": {
+    "baseline": [
+      {
+        "seed": 42,
+        "path": "/workspace/exp/N/N_p100_t999_s0.9/baseline_seed42.png",
+        "dino": 0.7352059483528137,
+        "arcface": 0.06185178458690643
+      },
+      {
+        "seed": 43,
+        "path": "/workspace/exp/N/N_p100_t999_s0.9/baseline_seed43.png",
+        "dino": 0.6105910539627075,
+        "arcface": -0.04652097821235657
+      },
+      {
+        "seed": 44,
+        "path": "/workspace/exp/N/N_p100_t999_s0.9/baseline_seed44.png",
+        "dino": 0.6927695274353027,
+        "arcface": 0.08213446289300919
+      }
+    ],
+    "N_p100_t999_s0.9": [
+      {
+        "seed": 42,
+        "path": "/workspace/exp/N/N_p100_t999_s0.9/N_p100_t999_s0.9_seed42.png",
+        "dino": 0.4942666292190552,
+        "arcface": 0.06858184933662415
+      },
+      {
+        "seed": 43,
+        "path": "/workspace/exp/N/N_p100_t999_s0.9/N_p100_t999_s0.9_seed43.png",
+        "dino": 0.5036314129829407,
+        "arcface": 0.12725156545639038
+      },
+      {
+        "seed": 44,
+        "path": "/workspace/exp/N/N_p100_t999_s0.9/N_p100_t999_s0.9_seed44.png",
+        "dino": 0.5383092164993286,
+        "arcface": -0.003740205429494381
+      }
+    ]
+  },
+  "summary": {
+    "baseline": {
+      "dino": {
+        "mean": 0.679522176583608,
+        "std": 0.06335485146699701,
+        "n_nan": 0
+      },
+      "arcface": {
+        "mean": 0.03248842308918635,
+        "std": 0.06917160458120371,
+        "n_nan": 0
+      }
+    },
+    "N_p100_t999_s0.9": {
+      "dino": {
+        "mean": 0.5120690862337748,
+        "std": 0.02320200683132835,
+        "n_nan": 0
+      },
+      "arcface": {
+        "mean": 0.06403106978784005,
+        "std": 0.06561435213298425,
+        "n_nan": 0
+      }
+    }
+  },
+  "delta_vs_baseline": {
+    "dino": -0.16745309034983324,
+    "arcface": 0.031542646698653705
+  },
+  "timestamp": "2026-09-09 12:48:43"
+}

@@ -1,0 +1,83 @@
+{
+  "scheme": "G_a0.5_s2.0",
+  "note": "x_T = renorm((1-0.5)*eps + 0.5*blur_sigma2.0(eps))",
+  "requirement": {
+    "arcface_min": 0.111,
+    "dino_max": 0.6
+  },
+  "passed": false,
+  "vram_gb": 15.28,
+  "per_seed": {
+    "baseline": [
+      {
+        "seed": 42,
+        "path": "/workspace/exp/G/G_a0.5_s2.0/baseline_seed42.png",
+        "dino": 0.33327674865722656,
+        "arcface": 0.014804786071181297
+      },
+      {
+        "seed": 43,
+        "path": "/workspace/exp/G/G_a0.5_s2.0/baseline_seed43.png",
+        "dino": 0.3743821978569031,
+        "arcface": -0.11036460846662521
+      },
+      {
+        "seed": 44,
+        "path": "/workspace/exp/G/G_a0.5_s2.0/baseline_seed44.png",
+        "dino": 0.42794686555862427,
+        "arcface": -0.08326953649520874
+      }
+    ],
+    "G_a0.5_s2.0": [
+      {
+        "seed": 42,
+        "path": "/workspace/exp/G/G_a0.5_s2.0/G_a0.5_s2.0_seed42.png",
+        "dino": 0.0649014264345169,
+        "arcface": NaN
+      },
+      {
+        "seed": 43,
+        "path": "/workspace/exp/G/G_a0.5_s2.0/G_a0.5_s2.0_seed43.png",
+        "dino": 0.026165153831243515,
+        "arcface": NaN
+      },
+      {
+        "seed": 44,
+        "path": "/workspace/exp/G/G_a0.5_s2.0/G_a0.5_s2.0_seed44.png",
+        "dino": 0.007800715044140816,
+        "arcface": NaN
+      }
+    ]
+  },
+  "summary": {
+    "baseline": {
+      "dino": {
+        "mean": 0.37853527069091797,
+        "std": 0.047471504810828895,
+        "n_nan": 0
+      },
+      "arcface": {
+        "mean": -0.05960978629688422,
+        "std": 0.06585349016434591,
+        "n_nan": 0
+      }
+    },
+    "G_a0.5_s2.0": {
+      "dino": {
+        "mean": 0.032955765103300415,
+        "std": 0.029149736043537273,
+        "n_nan": 0
+      },
+      "arcface": {
+        "mean": NaN,
+        "std": NaN,
+        "n_nan": 3
+      }
+    }
+  },
+  "delta_vs_baseline": {
+    "dino": -0.3455795055876176,
+    "arcface": NaN
+  },
+  "timestamp": "2026-09-09 12:28:00"
+}
