@@ -1,0 +1,7 @@
+anchor,t_start,seed,path,dino,arcface
+t999,999,42,/workspace/outputs/h2_ctrl/woman_t999_seed42.png,0.5461909770965576,0.22625626623630524
+t999,999,43,/workspace/outputs/h2_ctrl/woman_t999_seed43.png,0.4435451030731201,0.0865175649523735
+t999,999,44,/workspace/outputs/h2_ctrl/woman_t999_seed44.png,0.5732328295707703,0.07593274116516113
+t799,799,42,/workspace/outputs/h2_ctrl/woman_t799_seed42.png,0.36658766865730286,-0.11277751624584198
+t799,799,43,/workspace/outputs/h2_ctrl/woman_t799_seed43.png,0.5644445419311523,0.10441473871469498
+t799,799,44,/workspace/outputs/h2_ctrl/woman_t799_seed44.png,0.3073764443397522,0.05229068547487259
