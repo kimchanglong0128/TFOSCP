@@ -1,0 +1,167 @@
+{
+  "scheme": "Y_face_cu_layout_t959",
+  "note": "pass1 text-only 1-step layout (same seed), re-noised to t=959, pass2 1-step with face adapter (1+1 NFE)",
+  "requirement": {
+    "arcface_min": 0.144,
+    "dino_max": 0.6
+  },
+  "passed": true,
+  "vram_gb": 13.16,
+  "per_seed": {
+    "baseline": [
+      {
+        "seed": 42,
+        "path": "/workspace/exp/Y/Y_face_cu_layout_t959/baseline_seed42.png",
+        "dino": 0.3659222424030304,
+        "arcface": 0.032768018543720245
+      },
+      {
+        "seed": 43,
+        "path": "/workspace/exp/Y/Y_face_cu_layout_t959/baseline_seed43.png",
+        "dino": 0.44249019026756287,
+        "arcface": 0.05415676161646843
+      },
+      {
+        "seed": 44,
+        "path": "/workspace/exp/Y/Y_face_cu_layout_t959/baseline_seed44.png",
+        "dino": 0.4714880585670471,
+        "arcface": 0.060877058655023575
+      },
+      {
+        "seed": 45,
+        "path": "/workspace/exp/Y/Y_face_cu_layout_t959/baseline_seed45.png",
+        "dino": 0.255088210105896,
+        "arcface": -0.03194067254662514
+      },
+      {
+        "seed": 46,
+        "path": "/workspace/exp/Y/Y_face_cu_layout_t959/baseline_seed46.png",
+        "dino": 0.47773027420043945,
+        "arcface": 0.0021082181483507156
+      },
+      {
+        "seed": 47,
+        "path": "/workspace/exp/Y/Y_face_cu_layout_t959/baseline_seed47.png",
+        "dino": 0.34037891030311584,
+        "arcface": -0.06316927820444107
+      },
+      {
+        "seed": 48,
+        "path": "/workspace/exp/Y/Y_face_cu_layout_t959/baseline_seed48.png",
+        "dino": 0.33512693643569946,
+        "arcface": -0.0861278623342514
+      },
+      {
+        "seed": 49,
+        "path": "/workspace/exp/Y/Y_face_cu_layout_t959/baseline_seed49.png",
+        "dino": 0.23523283004760742,
+        "arcface": 0.09983406960964203
+      },
+      {
+        "seed": 50,
+        "path": "/workspace/exp/Y/Y_face_cu_layout_t959/baseline_seed50.png",
+        "dino": 0.30386894941329956,
+        "arcface": -0.04566333815455437
+      },
+      {
+        "seed": 51,
+        "path": "/workspace/exp/Y/Y_face_cu_layout_t959/baseline_seed51.png",
+        "dino": 0.2795848846435547,
+        "arcface": 0.038953088223934174
+      }
+    ],
+    "Y_face_cu_layout_t959": [
+      {
+        "seed": 42,
+        "path": "/workspace/exp/Y/Y_face_cu_layout_t959/Y_face_cu_layout_t959_seed42.png",
+        "dino": 0.38703954219818115,
+        "arcface": 0.20794677734375
+      },
+      {
+        "seed": 43,
+        "path": "/workspace/exp/Y/Y_face_cu_layout_t959/Y_face_cu_layout_t959_seed43.png",
+        "dino": 0.45613569021224976,
+        "arcface": 0.11223717778921127
+      },
+      {
+        "seed": 44,
+        "path": "/workspace/exp/Y/Y_face_cu_layout_t959/Y_face_cu_layout_t959_seed44.png",
+        "dino": 0.4119096100330353,
+        "arcface": 0.20564797520637512
+      },
+      {
+        "seed": 45,
+        "path": "/workspace/exp/Y/Y_face_cu_layout_t959/Y_face_cu_layout_t959_seed45.png",
+        "dino": 0.36374932527542114,
+        "arcface": 0.018356647342443466
+      },
+      {
+        "seed": 46,
+        "path": "/workspace/exp/Y/Y_face_cu_layout_t959/Y_face_cu_layout_t959_seed46.png",
+        "dino": 0.39214783906936646,
+        "arcface": 0.26931917667388916
+      },
+      {
+        "seed": 47,
+        "path": "/workspace/exp/Y/Y_face_cu_layout_t959/Y_face_cu_layout_t959_seed47.png",
+        "dino": 0.3409537672996521,
+        "arcface": 0.015323635190725327
+      },
+      {
+        "seed": 48,
+        "path": "/workspace/exp/Y/Y_face_cu_layout_t959/Y_face_cu_layout_t959_seed48.png",
+        "dino": 0.4203312397003174,
+        "arcface": 0.25362008810043335
+      },
+      {
+        "seed": 49,
+        "path": "/workspace/exp/Y/Y_face_cu_layout_t959/Y_face_cu_layout_t959_seed49.png",
+        "dino": 0.31172671914100647,
+        "arcface": 0.06258270144462585
+      },
+      {
+        "seed": 50,
+        "path": "/workspace/exp/Y/Y_face_cu_layout_t959/Y_face_cu_layout_t959_seed50.png",
+        "dino": 0.37783578038215637,
+        "arcface": 0.2153230607509613
+      },
+      {
+        "seed": 51,
+        "path": "/workspace/exp/Y/Y_face_cu_layout_t959/Y_face_cu_layout_t959_seed51.png",
+        "dino": 0.3837021589279175,
+        "arcface": 0.14998838305473328
+      }
+    ]
+  },
+  "summary": {
+    "baseline": {
+      "dino": {
+        "mean": 0.3506911486387253,
+        "std": 0.08784926130189255,
+        "n_nan": 0
+      },
+      "arcface": {
+        "mean": 0.006179606355726719,
+        "std": 0.06085792316305761,
+        "n_nan": 0
+      }
+    },
+    "Y_face_cu_layout_t959": {
+      "dino": {
+        "mean": 0.38455316722393035,
+        "std": 0.04068798715246387,
+        "n_nan": 0
+      },
+      "arcface": {
+        "mean": 0.15103456228971482,
+        "std": 0.0944108187679379,
+        "n_nan": 0
+      }
+    }
+  },
+  "delta_vs_baseline": {
+    "dino": 0.033862018585205045,
+    "arcface": 0.1448549559339881
+  },
+  "timestamp": "2026-09-09 23:45:05"
+}

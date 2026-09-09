@@ -1,0 +1,167 @@
+{
+  "scheme": "Y2_xseed_t999",
+  "note": "layout from the NEXT seed (offline-bank test), t999",
+  "requirement": {
+    "arcface_min": 0.144,
+    "dino_max": 0.6
+  },
+  "passed": false,
+  "vram_gb": 13.16,
+  "per_seed": {
+    "baseline": [
+      {
+        "seed": 42,
+        "path": "/workspace/exp/Y2/Y2_xseed_t999/baseline_seed42.png",
+        "dino": 0.3659222424030304,
+        "arcface": 0.032768018543720245
+      },
+      {
+        "seed": 43,
+        "path": "/workspace/exp/Y2/Y2_xseed_t999/baseline_seed43.png",
+        "dino": 0.44249019026756287,
+        "arcface": 0.05415676161646843
+      },
+      {
+        "seed": 44,
+        "path": "/workspace/exp/Y2/Y2_xseed_t999/baseline_seed44.png",
+        "dino": 0.4714880585670471,
+        "arcface": 0.060877058655023575
+      },
+      {
+        "seed": 45,
+        "path": "/workspace/exp/Y2/Y2_xseed_t999/baseline_seed45.png",
+        "dino": 0.255088210105896,
+        "arcface": -0.03194067254662514
+      },
+      {
+        "seed": 46,
+        "path": "/workspace/exp/Y2/Y2_xseed_t999/baseline_seed46.png",
+        "dino": 0.47773027420043945,
+        "arcface": 0.0021082181483507156
+      },
+      {
+        "seed": 47,
+        "path": "/workspace/exp/Y2/Y2_xseed_t999/baseline_seed47.png",
+        "dino": 0.34037891030311584,
+        "arcface": -0.06316927820444107
+      },
+      {
+        "seed": 48,
+        "path": "/workspace/exp/Y2/Y2_xseed_t999/baseline_seed48.png",
+        "dino": 0.33512693643569946,
+        "arcface": -0.0861278623342514
+      },
+      {
+        "seed": 49,
+        "path": "/workspace/exp/Y2/Y2_xseed_t999/baseline_seed49.png",
+        "dino": 0.23523283004760742,
+        "arcface": 0.09983406960964203
+      },
+      {
+        "seed": 50,
+        "path": "/workspace/exp/Y2/Y2_xseed_t999/baseline_seed50.png",
+        "dino": 0.30386894941329956,
+        "arcface": -0.04566333815455437
+      },
+      {
+        "seed": 51,
+        "path": "/workspace/exp/Y2/Y2_xseed_t999/baseline_seed51.png",
+        "dino": 0.2795848846435547,
+        "arcface": 0.038953088223934174
+      }
+    ],
+    "Y2_xseed_t999": [
+      {
+        "seed": 42,
+        "path": "/workspace/exp/Y2/Y2_xseed_t999/Y2_xseed_t999_seed42.png",
+        "dino": 0.38258498907089233,
+        "arcface": 0.030880345031619072
+      },
+      {
+        "seed": 43,
+        "path": "/workspace/exp/Y2/Y2_xseed_t999/Y2_xseed_t999_seed43.png",
+        "dino": 0.3615897297859192,
+        "arcface": 0.09714899212121964
+      },
+      {
+        "seed": 44,
+        "path": "/workspace/exp/Y2/Y2_xseed_t999/Y2_xseed_t999_seed44.png",
+        "dino": 0.3548297882080078,
+        "arcface": -0.03895283117890358
+      },
+      {
+        "seed": 45,
+        "path": "/workspace/exp/Y2/Y2_xseed_t999/Y2_xseed_t999_seed45.png",
+        "dino": 0.3706716299057007,
+        "arcface": 0.019785333424806595
+      },
+      {
+        "seed": 46,
+        "path": "/workspace/exp/Y2/Y2_xseed_t999/Y2_xseed_t999_seed46.png",
+        "dino": 0.4221287667751312,
+        "arcface": -0.0024301279336214066
+      },
+      {
+        "seed": 47,
+        "path": "/workspace/exp/Y2/Y2_xseed_t999/Y2_xseed_t999_seed47.png",
+        "dino": 0.4906976521015167,
+        "arcface": 0.1798255443572998
+      },
+      {
+        "seed": 48,
+        "path": "/workspace/exp/Y2/Y2_xseed_t999/Y2_xseed_t999_seed48.png",
+        "dino": 0.38861745595932007,
+        "arcface": -0.03312347084283829
+      },
+      {
+        "seed": 49,
+        "path": "/workspace/exp/Y2/Y2_xseed_t999/Y2_xseed_t999_seed49.png",
+        "dino": 0.34464210271835327,
+        "arcface": -0.10812162607908249
+      },
+      {
+        "seed": 50,
+        "path": "/workspace/exp/Y2/Y2_xseed_t999/Y2_xseed_t999_seed50.png",
+        "dino": 0.39715975522994995,
+        "arcface": 0.23057761788368225
+      },
+      {
+        "seed": 51,
+        "path": "/workspace/exp/Y2/Y2_xseed_t999/Y2_xseed_t999_seed51.png",
+        "dino": 0.3530826270580292,
+        "arcface": -0.03538145124912262
+      }
+    ]
+  },
+  "summary": {
+    "baseline": {
+      "dino": {
+        "mean": 0.3506911486387253,
+        "std": 0.08784926130189255,
+        "n_nan": 0
+      },
+      "arcface": {
+        "mean": 0.006179606355726719,
+        "std": 0.06085792316305761,
+        "n_nan": 0
+      }
+    },
+    "Y2_xseed_t999": {
+      "dino": {
+        "mean": 0.38660044968128204,
+        "std": 0.04346488453912061,
+        "n_nan": 0
+      },
+      "arcface": {
+        "mean": 0.034020832553505895,
+        "std": 0.10555388387608187,
+        "n_nan": 0
+      }
+    }
+  },
+  "delta_vs_baseline": {
+    "dino": 0.03590930104255674,
+    "arcface": 0.027841226197779175
+  },
+  "timestamp": "2026-09-09 23:48:51"
+}

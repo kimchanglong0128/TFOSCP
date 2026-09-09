@@ -13,12 +13,17 @@ SEEDS = [42, 43, 44]
 REQ = dict(arcface_min=0.069, dino_max=0.60)        # 2-step level re-estimated on 10 seeds the archive way (was 0.111 on 3 seeds)
 LATENT_SHAPE = (1, 4, 128, 128)
 
-def load_pipe(scale=0.6):
+ADAPTERS = {
+    'base': dict(weight_name='ip-adapter_sdxl.bin', image_encoder_folder='sdxl_models/image_encoder'),
+    'face': dict(weight_name='ip-adapter-plus-face_sdxl_vit-h.safetensors', image_encoder_folder='models/image_encoder'),
+}
+def load_pipe(scale=0.6, adapter='base'):
     pipe = DiffusionPipeline.from_pretrained("stabilityai/stable-diffusion-xl-base-1.0",
                                              dtype=torch.float16, variant="fp16", use_safetensors=True).to('cuda')
     pipe.scheduler = LCMScheduler.from_config(pipe.scheduler.config)
     pipe.load_lora_weights("latent-consistency/lcm-lora-sdxl")
-    pipe.load_ip_adapter("h94/IP-Adapter", subfolder='sdxl_models', weight_name='ip-adapter_sdxl.bin')
+    a = ADAPTERS[adapter]
+    pipe.load_ip_adapter("h94/IP-Adapter", subfolder='sdxl_models', weight_name=a['weight_name'], image_encoder_folder=a['image_encoder_folder'])
     pipe.set_ip_adapter_scale(scale)
     pipe.set_progress_bar_config(disable=True)
     return pipe
@@ -62,18 +67,20 @@ def vram_check():
     assert used < 23.0, f"VRAM {used:.1f} GB too close to 24 GB"
     return round(used, 2)
 
-def run_scheme(name, pipe, make_latents, outdir, timesteps=None, extra_kw=None, note="", prompt=None, archive_check=True, base_kw=None):
+def run_scheme(name, pipe, make_latents, outdir, timesteps=None, extra_kw=None, note="", prompt=None, archive_check=True, base_kw=None, setup_base=None, setup_scheme=None):
     """make_latents(seed) -> latents. Runs scheme + same-seed baseline, writes results.json, returns dict."""
     os.makedirs(outdir, exist_ok=True); extra_kw = extra_kw or {}
     assert pipe.scheduler.alphas_cumprod.device.type == 'cpu', 'scheduler state mutated (alphas_cumprod on GPU): do not call scheduler.add_noise'
     rows = {'baseline': [], name: []}
     for seed in SEEDS:
+        if setup_base: setup_base()
         base_img = generate(pipe, noise_for(seed), seed, prompt=prompt, **(base_kw or {}))
         bp = f'{outdir}/baseline_seed{seed}.png'; base_img.save(bp); check_image(base_img)
         # reproducibility guard: baseline must match the archived 1-step image bit-for-bit
         if archive_check:
             ref = np.asarray(Image.open(f'/workspace/outputs/ipa_seeds/ref_woman/woman_step1_seed{seed}.png'))
             assert np.array_equal(np.asarray(base_img), ref), f"baseline drift at seed {seed}"
+        if setup_scheme: setup_scheme()
         lat = make_latents(seed)
         assert torch.isfinite(lat).all(), "NaN/Inf in latents"
         img = generate(pipe, lat, seed, timesteps=timesteps, prompt=prompt, **extra_kw)
