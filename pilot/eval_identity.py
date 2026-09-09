@@ -35,18 +35,20 @@ for subject, fname in cate.items():
 
 ref_arc = {'woman': arc_embed(cv2.imread('/workspace/pilot/refs/person.jpeg'))}
 
+IN_DIR = '/workspace/outputs/ipa_seeds'
 rows = []
 for subject in cate:
     for step in [8, 6, 4, 3, 2, 1]:
-        path = f'/workspace/outputs/ipa_neutral/{subject}_step{step}.png'
-        d = float(dino_embed(Image.open(path).convert('RGB')) @ ref_dino[subject])
-        if subject in ref_arc:
-            e = arc_embed(cv2.imread(path))
-            a = float('nan') if e is None else float(e @ ref_arc[subject])
-        else:
-            a = float('nan')
-        rows.append(dict(subject=subject, step=step, dino=d, arcface=a))
+        for seed in [42, 43, 44]:
+            path = f'{IN_DIR}/ref_{subject}/{subject}_step{step}_seed{seed}.png'
+            d = float(dino_embed(Image.open(path).convert('RGB')) @ ref_dino[subject])
+            if subject in ref_arc:
+                e = arc_embed(cv2.imread(path))
+                a = float('nan') if e is None else float(e @ ref_arc[subject])
+            else:
+                a = float('nan')
+            rows.append(dict(subject=subject, step=step, dino=d, arcface=a, seed=seed))
 
 df = pd.DataFrame(rows)
-print(df)
-df.to_csv(f"/workspace/outputs/eval_ipa_neutral.csv", index=False)
+print(df.groupby(['subject', 'step'])[['dino', 'arcface']].agg(['mean', 'std']).round(3))
+df.to_csv('/workspace/outputs/eval_ipa_seeds.csv', index=False)

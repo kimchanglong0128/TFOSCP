@@ -21,15 +21,17 @@ print(type(list(pipe.unet.attn_processors.values())[0]).__name__)
 
 
 refs = {'woman':'person.jpeg', 'dog':'dog.jpg'}
+OUT_DIR = '/workspace/outputs/ipa_seeds'
 for i in [8, 6, 4, 3, 2, 1]:
     for subject, k in refs.items():
-        os.makedirs(f'/workspace/outputs/ipa_neutral/ref_{subject}', exist_ok=True)
-        generator = torch.Generator('cuda').manual_seed(42)
-        image = pipe(
-            prompt = f"a photo of a {subject}",
-            num_inference_steps=i,
-            guidance_scale=1,
-            ip_adapter_image = Image.open(f'/workspace/pilot/refs/{k}').convert('RGB'),
-            generator = generator
-        ).images[0]
-        image.save(f'/workspace/outputs/ipa_neutral/{subject}_step{i}.png') 
+        os.makedirs(f'{OUT_DIR}/ref_{subject}', exist_ok=True)
+        for seed in [42, 43, 44]:
+            generator = torch.Generator('cuda').manual_seed(seed)
+            image = pipe(
+                prompt = f"a photo of a {subject} wearing sunglasses, on a beach",
+                num_inference_steps=i,
+                guidance_scale=1,
+                ip_adapter_image = Image.open(f'/workspace/pilot/refs/{k}').convert('RGB'),
+                generator = generator
+            ).images[0]
+            image.save(f'{OUT_DIR}/ref_{subject}/{subject}_step{i}_seed{seed}.png')
