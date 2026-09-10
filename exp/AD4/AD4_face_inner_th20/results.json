@@ -1,0 +1,167 @@
+{
+  "scheme": "AD4_face_inner_th20",
+  "note": "low-freq rotation 20 deg toward inner",
+  "requirement": {
+    "arcface_min": 0.144,
+    "dino_max": 0.6
+  },
+  "passed": false,
+  "vram_gb": 13.16,
+  "per_seed": {
+    "baseline": [
+      {
+        "seed": 42,
+        "path": "/workspace/exp/AD4/AD4_face_inner_th20/baseline_seed42.png",
+        "dino": 0.3659222424030304,
+        "arcface": 0.032768018543720245
+      },
+      {
+        "seed": 43,
+        "path": "/workspace/exp/AD4/AD4_face_inner_th20/baseline_seed43.png",
+        "dino": 0.44249019026756287,
+        "arcface": 0.05415676161646843
+      },
+      {
+        "seed": 44,
+        "path": "/workspace/exp/AD4/AD4_face_inner_th20/baseline_seed44.png",
+        "dino": 0.4714880585670471,
+        "arcface": 0.060877058655023575
+      },
+      {
+        "seed": 45,
+        "path": "/workspace/exp/AD4/AD4_face_inner_th20/baseline_seed45.png",
+        "dino": 0.255088210105896,
+        "arcface": -0.03194067254662514
+      },
+      {
+        "seed": 46,
+        "path": "/workspace/exp/AD4/AD4_face_inner_th20/baseline_seed46.png",
+        "dino": 0.47773027420043945,
+        "arcface": 0.0021082181483507156
+      },
+      {
+        "seed": 47,
+        "path": "/workspace/exp/AD4/AD4_face_inner_th20/baseline_seed47.png",
+        "dino": 0.34037891030311584,
+        "arcface": -0.06316927820444107
+      },
+      {
+        "seed": 48,
+        "path": "/workspace/exp/AD4/AD4_face_inner_th20/baseline_seed48.png",
+        "dino": 0.33512693643569946,
+        "arcface": -0.0861278623342514
+      },
+      {
+        "seed": 49,
+        "path": "/workspace/exp/AD4/AD4_face_inner_th20/baseline_seed49.png",
+        "dino": 0.23523283004760742,
+        "arcface": 0.09983406960964203
+      },
+      {
+        "seed": 50,
+        "path": "/workspace/exp/AD4/AD4_face_inner_th20/baseline_seed50.png",
+        "dino": 0.30386894941329956,
+        "arcface": -0.04566333815455437
+      },
+      {
+        "seed": 51,
+        "path": "/workspace/exp/AD4/AD4_face_inner_th20/baseline_seed51.png",
+        "dino": 0.2795848846435547,
+        "arcface": 0.038953088223934174
+      }
+    ],
+    "AD4_face_inner_th20": [
+      {
+        "seed": 42,
+        "path": "/workspace/exp/AD4/AD4_face_inner_th20/AD4_face_inner_th20_seed42.png",
+        "dino": 0.28842002153396606,
+        "arcface": -0.01348034292459488
+      },
+      {
+        "seed": 43,
+        "path": "/workspace/exp/AD4/AD4_face_inner_th20/AD4_face_inner_th20_seed43.png",
+        "dino": 0.288530170917511,
+        "arcface": 0.023113753646612167
+      },
+      {
+        "seed": 44,
+        "path": "/workspace/exp/AD4/AD4_face_inner_th20/AD4_face_inner_th20_seed44.png",
+        "dino": 0.37796133756637573,
+        "arcface": 0.014035193249583244
+      },
+      {
+        "seed": 45,
+        "path": "/workspace/exp/AD4/AD4_face_inner_th20/AD4_face_inner_th20_seed45.png",
+        "dino": 0.4145672917366028,
+        "arcface": 0.051873281598091125
+      },
+      {
+        "seed": 46,
+        "path": "/workspace/exp/AD4/AD4_face_inner_th20/AD4_face_inner_th20_seed46.png",
+        "dino": 0.5803407430648804,
+        "arcface": 0.22746382653713226
+      },
+      {
+        "seed": 47,
+        "path": "/workspace/exp/AD4/AD4_face_inner_th20/AD4_face_inner_th20_seed47.png",
+        "dino": 0.27379482984542847,
+        "arcface": NaN
+      },
+      {
+        "seed": 48,
+        "path": "/workspace/exp/AD4/AD4_face_inner_th20/AD4_face_inner_th20_seed48.png",
+        "dino": 0.24193209409713745,
+        "arcface": -0.02897172048687935
+      },
+      {
+        "seed": 49,
+        "path": "/workspace/exp/AD4/AD4_face_inner_th20/AD4_face_inner_th20_seed49.png",
+        "dino": 0.4571651220321655,
+        "arcface": -0.04185349494218826
+      },
+      {
+        "seed": 50,
+        "path": "/workspace/exp/AD4/AD4_face_inner_th20/AD4_face_inner_th20_seed50.png",
+        "dino": 0.3666064143180847,
+        "arcface": 0.11056236922740936
+      },
+      {
+        "seed": 51,
+        "path": "/workspace/exp/AD4/AD4_face_inner_th20/AD4_face_inner_th20_seed51.png",
+        "dino": 0.5601767301559448,
+        "arcface": -0.02638537436723709
+      }
+    ]
+  },
+  "summary": {
+    "baseline": {
+      "dino": {
+        "mean": 0.3506911486387253,
+        "std": 0.08784926130189255,
+        "n_nan": 0
+      },
+      "arcface": {
+        "mean": 0.006179606355726719,
+        "std": 0.06085792316305761,
+        "n_nan": 0
+      }
+    },
+    "AD4_face_inner_th20": {
+      "dino": {
+        "mean": 0.3849494755268097,
+        "std": 0.11868908928416169,
+        "n_nan": 0
+      },
+      "arcface": {
+        "mean": 0.035150832393103175,
+        "std": 0.08641083089259859,
+        "n_nan": 1
+      }
+    }
+  },
+  "delta_vs_baseline": {
+    "dino": 0.03425832688808439,
+    "arcface": 0.028971226037376455
+  },
+  "timestamp": "2026-09-10 00:32:25"
+}

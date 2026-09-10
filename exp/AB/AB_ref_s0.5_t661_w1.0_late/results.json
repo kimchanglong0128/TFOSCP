@@ -1,0 +1,167 @@
+{
+  "scheme": "AB_ref_s0.5_t661_w1.0_late",
+  "note": "Q from (1-0.5)*z_ref at t_key=661; injected w=1.0 into ('mid_block', 'up_blocks'); K/V dynamic",
+  "requirement": {
+    "arcface_min": 0.144,
+    "dino_max": 0.6
+  },
+  "passed": false,
+  "vram_gb": 13.36,
+  "per_seed": {
+    "baseline": [
+      {
+        "seed": 42,
+        "path": "/workspace/exp/AB/AB_ref_s0.5_t661_w1.0_late/baseline_seed42.png",
+        "dino": 0.3659222424030304,
+        "arcface": 0.032768018543720245
+      },
+      {
+        "seed": 43,
+        "path": "/workspace/exp/AB/AB_ref_s0.5_t661_w1.0_late/baseline_seed43.png",
+        "dino": 0.44249019026756287,
+        "arcface": 0.05415676161646843
+      },
+      {
+        "seed": 44,
+        "path": "/workspace/exp/AB/AB_ref_s0.5_t661_w1.0_late/baseline_seed44.png",
+        "dino": 0.4714880585670471,
+        "arcface": 0.060877058655023575
+      },
+      {
+        "seed": 45,
+        "path": "/workspace/exp/AB/AB_ref_s0.5_t661_w1.0_late/baseline_seed45.png",
+        "dino": 0.255088210105896,
+        "arcface": -0.03194067254662514
+      },
+      {
+        "seed": 46,
+        "path": "/workspace/exp/AB/AB_ref_s0.5_t661_w1.0_late/baseline_seed46.png",
+        "dino": 0.47773027420043945,
+        "arcface": 0.0021082181483507156
+      },
+      {
+        "seed": 47,
+        "path": "/workspace/exp/AB/AB_ref_s0.5_t661_w1.0_late/baseline_seed47.png",
+        "dino": 0.34037891030311584,
+        "arcface": -0.06316927820444107
+      },
+      {
+        "seed": 48,
+        "path": "/workspace/exp/AB/AB_ref_s0.5_t661_w1.0_late/baseline_seed48.png",
+        "dino": 0.33512693643569946,
+        "arcface": -0.0861278623342514
+      },
+      {
+        "seed": 49,
+        "path": "/workspace/exp/AB/AB_ref_s0.5_t661_w1.0_late/baseline_seed49.png",
+        "dino": 0.23523283004760742,
+        "arcface": 0.09983406960964203
+      },
+      {
+        "seed": 50,
+        "path": "/workspace/exp/AB/AB_ref_s0.5_t661_w1.0_late/baseline_seed50.png",
+        "dino": 0.30386894941329956,
+        "arcface": -0.04566333815455437
+      },
+      {
+        "seed": 51,
+        "path": "/workspace/exp/AB/AB_ref_s0.5_t661_w1.0_late/baseline_seed51.png",
+        "dino": 0.2795848846435547,
+        "arcface": 0.038953088223934174
+      }
+    ],
+    "AB_ref_s0.5_t661_w1.0_late": [
+      {
+        "seed": 42,
+        "path": "/workspace/exp/AB/AB_ref_s0.5_t661_w1.0_late/AB_ref_s0.5_t661_w1.0_late_seed42.png",
+        "dino": 0.12442074716091156,
+        "arcface": NaN
+      },
+      {
+        "seed": 43,
+        "path": "/workspace/exp/AB/AB_ref_s0.5_t661_w1.0_late/AB_ref_s0.5_t661_w1.0_late_seed43.png",
+        "dino": 0.3336490988731384,
+        "arcface": 0.011117246001958847
+      },
+      {
+        "seed": 44,
+        "path": "/workspace/exp/AB/AB_ref_s0.5_t661_w1.0_late/AB_ref_s0.5_t661_w1.0_late_seed44.png",
+        "dino": 0.2487584948539734,
+        "arcface": 0.05147562921047211
+      },
+      {
+        "seed": 45,
+        "path": "/workspace/exp/AB/AB_ref_s0.5_t661_w1.0_late/AB_ref_s0.5_t661_w1.0_late_seed45.png",
+        "dino": 0.16723410785198212,
+        "arcface": NaN
+      },
+      {
+        "seed": 46,
+        "path": "/workspace/exp/AB/AB_ref_s0.5_t661_w1.0_late/AB_ref_s0.5_t661_w1.0_late_seed46.png",
+        "dino": 0.3024027943611145,
+        "arcface": NaN
+      },
+      {
+        "seed": 47,
+        "path": "/workspace/exp/AB/AB_ref_s0.5_t661_w1.0_late/AB_ref_s0.5_t661_w1.0_late_seed47.png",
+        "dino": 0.31766530871391296,
+        "arcface": NaN
+      },
+      {
+        "seed": 48,
+        "path": "/workspace/exp/AB/AB_ref_s0.5_t661_w1.0_late/AB_ref_s0.5_t661_w1.0_late_seed48.png",
+        "dino": 0.30463337898254395,
+        "arcface": 0.048423826694488525
+      },
+      {
+        "seed": 49,
+        "path": "/workspace/exp/AB/AB_ref_s0.5_t661_w1.0_late/AB_ref_s0.5_t661_w1.0_late_seed49.png",
+        "dino": 0.26805877685546875,
+        "arcface": NaN
+      },
+      {
+        "seed": 50,
+        "path": "/workspace/exp/AB/AB_ref_s0.5_t661_w1.0_late/AB_ref_s0.5_t661_w1.0_late_seed50.png",
+        "dino": 0.3666955530643463,
+        "arcface": NaN
+      },
+      {
+        "seed": 51,
+        "path": "/workspace/exp/AB/AB_ref_s0.5_t661_w1.0_late/AB_ref_s0.5_t661_w1.0_late_seed51.png",
+        "dino": 0.37724941968917847,
+        "arcface": 0.042604874819517136
+      }
+    ]
+  },
+  "summary": {
+    "baseline": {
+      "dino": {
+        "mean": 0.3506911486387253,
+        "std": 0.08784926130189255,
+        "n_nan": 0
+      },
+      "arcface": {
+        "mean": 0.006179606355726719,
+        "std": 0.06085792316305761,
+        "n_nan": 0
+      }
+    },
+    "AB_ref_s0.5_t661_w1.0_late": {
+      "dino": {
+        "mean": 0.28107676804065707,
+        "std": 0.08192628048194936,
+        "n_nan": 0
+      },
+      "arcface": {
+        "mean": 0.038405394181609154,
+        "std": 0.01856051994986088,
+        "n_nan": 6
+      }
+    }
+  },
+  "delta_vs_baseline": {
+    "dino": -0.06961438059806824,
+    "arcface": 0.03222578782588244
+  },
+  "timestamp": "2026-09-10 00:19:03"
+}

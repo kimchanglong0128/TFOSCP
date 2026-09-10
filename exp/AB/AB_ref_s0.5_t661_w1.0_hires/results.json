@@ -1,0 +1,167 @@
+{
+  "scheme": "AB_ref_s0.5_t661_w1.0_hires",
+  "note": "Q from (1-0.5)*z_ref at t_key=661; injected w=1.0 into ('up_blocks.1',); K/V dynamic",
+  "requirement": {
+    "arcface_min": 0.144,
+    "dino_max": 0.6
+  },
+  "passed": false,
+  "vram_gb": 13.37,
+  "per_seed": {
+    "baseline": [
+      {
+        "seed": 42,
+        "path": "/workspace/exp/AB/AB_ref_s0.5_t661_w1.0_hires/baseline_seed42.png",
+        "dino": 0.3659222424030304,
+        "arcface": 0.032768018543720245
+      },
+      {
+        "seed": 43,
+        "path": "/workspace/exp/AB/AB_ref_s0.5_t661_w1.0_hires/baseline_seed43.png",
+        "dino": 0.44249019026756287,
+        "arcface": 0.05415676161646843
+      },
+      {
+        "seed": 44,
+        "path": "/workspace/exp/AB/AB_ref_s0.5_t661_w1.0_hires/baseline_seed44.png",
+        "dino": 0.4714880585670471,
+        "arcface": 0.060877058655023575
+      },
+      {
+        "seed": 45,
+        "path": "/workspace/exp/AB/AB_ref_s0.5_t661_w1.0_hires/baseline_seed45.png",
+        "dino": 0.255088210105896,
+        "arcface": -0.03194067254662514
+      },
+      {
+        "seed": 46,
+        "path": "/workspace/exp/AB/AB_ref_s0.5_t661_w1.0_hires/baseline_seed46.png",
+        "dino": 0.47773027420043945,
+        "arcface": 0.0021082181483507156
+      },
+      {
+        "seed": 47,
+        "path": "/workspace/exp/AB/AB_ref_s0.5_t661_w1.0_hires/baseline_seed47.png",
+        "dino": 0.34037891030311584,
+        "arcface": -0.06316927820444107
+      },
+      {
+        "seed": 48,
+        "path": "/workspace/exp/AB/AB_ref_s0.5_t661_w1.0_hires/baseline_seed48.png",
+        "dino": 0.33512693643569946,
+        "arcface": -0.0861278623342514
+      },
+      {
+        "seed": 49,
+        "path": "/workspace/exp/AB/AB_ref_s0.5_t661_w1.0_hires/baseline_seed49.png",
+        "dino": 0.23523283004760742,
+        "arcface": 0.09983406960964203
+      },
+      {
+        "seed": 50,
+        "path": "/workspace/exp/AB/AB_ref_s0.5_t661_w1.0_hires/baseline_seed50.png",
+        "dino": 0.30386894941329956,
+        "arcface": -0.04566333815455437
+      },
+      {
+        "seed": 51,
+        "path": "/workspace/exp/AB/AB_ref_s0.5_t661_w1.0_hires/baseline_seed51.png",
+        "dino": 0.2795848846435547,
+        "arcface": 0.038953088223934174
+      }
+    ],
+    "AB_ref_s0.5_t661_w1.0_hires": [
+      {
+        "seed": 42,
+        "path": "/workspace/exp/AB/AB_ref_s0.5_t661_w1.0_hires/AB_ref_s0.5_t661_w1.0_hires_seed42.png",
+        "dino": 0.08643856644630432,
+        "arcface": 0.08670834451913834
+      },
+      {
+        "seed": 43,
+        "path": "/workspace/exp/AB/AB_ref_s0.5_t661_w1.0_hires/AB_ref_s0.5_t661_w1.0_hires_seed43.png",
+        "dino": 0.09836501628160477,
+        "arcface": 0.005881965160369873
+      },
+      {
+        "seed": 44,
+        "path": "/workspace/exp/AB/AB_ref_s0.5_t661_w1.0_hires/AB_ref_s0.5_t661_w1.0_hires_seed44.png",
+        "dino": 0.19137120246887207,
+        "arcface": NaN
+      },
+      {
+        "seed": 45,
+        "path": "/workspace/exp/AB/AB_ref_s0.5_t661_w1.0_hires/AB_ref_s0.5_t661_w1.0_hires_seed45.png",
+        "dino": 0.182728573679924,
+        "arcface": NaN
+      },
+      {
+        "seed": 46,
+        "path": "/workspace/exp/AB/AB_ref_s0.5_t661_w1.0_hires/AB_ref_s0.5_t661_w1.0_hires_seed46.png",
+        "dino": 0.38530677556991577,
+        "arcface": 0.11620374768972397
+      },
+      {
+        "seed": 47,
+        "path": "/workspace/exp/AB/AB_ref_s0.5_t661_w1.0_hires/AB_ref_s0.5_t661_w1.0_hires_seed47.png",
+        "dino": 0.33659636974334717,
+        "arcface": 0.02709640935063362
+      },
+      {
+        "seed": 48,
+        "path": "/workspace/exp/AB/AB_ref_s0.5_t661_w1.0_hires/AB_ref_s0.5_t661_w1.0_hires_seed48.png",
+        "dino": 0.11713160574436188,
+        "arcface": 0.09722506999969482
+      },
+      {
+        "seed": 49,
+        "path": "/workspace/exp/AB/AB_ref_s0.5_t661_w1.0_hires/AB_ref_s0.5_t661_w1.0_hires_seed49.png",
+        "dino": 0.16016802191734314,
+        "arcface": NaN
+      },
+      {
+        "seed": 50,
+        "path": "/workspace/exp/AB/AB_ref_s0.5_t661_w1.0_hires/AB_ref_s0.5_t661_w1.0_hires_seed50.png",
+        "dino": 0.31095248460769653,
+        "arcface": 0.04847539961338043
+      },
+      {
+        "seed": 51,
+        "path": "/workspace/exp/AB/AB_ref_s0.5_t661_w1.0_hires/AB_ref_s0.5_t661_w1.0_hires_seed51.png",
+        "dino": 0.3122774362564087,
+        "arcface": 0.06332983076572418
+      }
+    ]
+  },
+  "summary": {
+    "baseline": {
+      "dino": {
+        "mean": 0.3506911486387253,
+        "std": 0.08784926130189255,
+        "n_nan": 0
+      },
+      "arcface": {
+        "mean": 0.006179606355726719,
+        "std": 0.06085792316305761,
+        "n_nan": 0
+      }
+    },
+    "AB_ref_s0.5_t661_w1.0_hires": {
+      "dino": {
+        "mean": 0.21813360527157782,
+        "std": 0.10887197072980134,
+        "n_nan": 0
+      },
+      "arcface": {
+        "mean": 0.0635601095855236,
+        "std": 0.03942185150290569,
+        "n_nan": 3
+      }
+    }
+  },
+  "delta_vs_baseline": {
+    "dino": -0.13255754336714748,
+    "arcface": 0.05738050322979689
+  },
+  "timestamp": "2026-09-10 00:20:59"
+}
