@@ -1,0 +1,6 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/223 [00:00<?, ?it/s]Loading weights:  42%|████▏     | 93/223 [00:00<00:00, 846.73it/s]Loading weights:  80%|███████▉  | 178/223 [00:00<00:00, 786.67it/s]Loading weights: 100%|██████████| 223/223 [00:00<00:00, 889.30it/s]
+/workspace/venv/lib/python3.12/site-packages/insightface/utils/face_align.py:23: FutureWarning: `estimate` is deprecated since version 0.26 and will be removed in version 2.2. Please use `SimilarityTransform.from_estimate` class constructor instead.
+  tform.estimate(lmk, dst)
+no-face 4-step images: 27 | per identity: {'id03': 6, 'id07': 1, 'id09': 4, 'id10': 6, 'id14': 2, 'id17': 3, 'id25': 2, 'id26': 3} | examples: ['id03_4step_s43.png', 'id03_4step_s46.png', 'id03_4step_s47.png', 'id03_4step_s54.png']
+DONE
