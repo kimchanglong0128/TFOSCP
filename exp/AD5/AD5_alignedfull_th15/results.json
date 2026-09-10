@@ -1,0 +1,167 @@
+{
+  "scheme": "AD5_alignedfull_th15",
+  "note": "low-freq rotation 15 deg toward alignedfull (face aligned to mean 1-step face box, gray bg)",
+  "requirement": {
+    "arcface_min": 0.144,
+    "dino_max": 0.6
+  },
+  "passed": false,
+  "vram_gb": 13.16,
+  "per_seed": {
+    "baseline": [
+      {
+        "seed": 42,
+        "path": "/workspace/exp/AD5/AD5_alignedfull_th15/baseline_seed42.png",
+        "dino": 0.3659222424030304,
+        "arcface": 0.032768018543720245
+      },
+      {
+        "seed": 43,
+        "path": "/workspace/exp/AD5/AD5_alignedfull_th15/baseline_seed43.png",
+        "dino": 0.44249019026756287,
+        "arcface": 0.05415676161646843
+      },
+      {
+        "seed": 44,
+        "path": "/workspace/exp/AD5/AD5_alignedfull_th15/baseline_seed44.png",
+        "dino": 0.4714880585670471,
+        "arcface": 0.060877058655023575
+      },
+      {
+        "seed": 45,
+        "path": "/workspace/exp/AD5/AD5_alignedfull_th15/baseline_seed45.png",
+        "dino": 0.255088210105896,
+        "arcface": -0.03194067254662514
+      },
+      {
+        "seed": 46,
+        "path": "/workspace/exp/AD5/AD5_alignedfull_th15/baseline_seed46.png",
+        "dino": 0.47773027420043945,
+        "arcface": 0.0021082181483507156
+      },
+      {
+        "seed": 47,
+        "path": "/workspace/exp/AD5/AD5_alignedfull_th15/baseline_seed47.png",
+        "dino": 0.34037891030311584,
+        "arcface": -0.06316927820444107
+      },
+      {
+        "seed": 48,
+        "path": "/workspace/exp/AD5/AD5_alignedfull_th15/baseline_seed48.png",
+        "dino": 0.33512693643569946,
+        "arcface": -0.0861278623342514
+      },
+      {
+        "seed": 49,
+        "path": "/workspace/exp/AD5/AD5_alignedfull_th15/baseline_seed49.png",
+        "dino": 0.23523283004760742,
+        "arcface": 0.09983406960964203
+      },
+      {
+        "seed": 50,
+        "path": "/workspace/exp/AD5/AD5_alignedfull_th15/baseline_seed50.png",
+        "dino": 0.30386894941329956,
+        "arcface": -0.04566333815455437
+      },
+      {
+        "seed": 51,
+        "path": "/workspace/exp/AD5/AD5_alignedfull_th15/baseline_seed51.png",
+        "dino": 0.2795848846435547,
+        "arcface": 0.038953088223934174
+      }
+    ],
+    "AD5_alignedfull_th15": [
+      {
+        "seed": 42,
+        "path": "/workspace/exp/AD5/AD5_alignedfull_th15/AD5_alignedfull_th15_seed42.png",
+        "dino": 0.4314495921134949,
+        "arcface": 0.050127603113651276
+      },
+      {
+        "seed": 43,
+        "path": "/workspace/exp/AD5/AD5_alignedfull_th15/AD5_alignedfull_th15_seed43.png",
+        "dino": 0.4868085980415344,
+        "arcface": -0.015511404722929
+      },
+      {
+        "seed": 44,
+        "path": "/workspace/exp/AD5/AD5_alignedfull_th15/AD5_alignedfull_th15_seed44.png",
+        "dino": 0.5080176591873169,
+        "arcface": 0.023369725793600082
+      },
+      {
+        "seed": 45,
+        "path": "/workspace/exp/AD5/AD5_alignedfull_th15/AD5_alignedfull_th15_seed45.png",
+        "dino": 0.38737428188323975,
+        "arcface": 0.08216773718595505
+      },
+      {
+        "seed": 46,
+        "path": "/workspace/exp/AD5/AD5_alignedfull_th15/AD5_alignedfull_th15_seed46.png",
+        "dino": 0.4433738589286804,
+        "arcface": 0.23767690360546112
+      },
+      {
+        "seed": 47,
+        "path": "/workspace/exp/AD5/AD5_alignedfull_th15/AD5_alignedfull_th15_seed47.png",
+        "dino": 0.5550479888916016,
+        "arcface": 0.20373503863811493
+      },
+      {
+        "seed": 48,
+        "path": "/workspace/exp/AD5/AD5_alignedfull_th15/AD5_alignedfull_th15_seed48.png",
+        "dino": 0.5003250241279602,
+        "arcface": 0.0947534590959549
+      },
+      {
+        "seed": 49,
+        "path": "/workspace/exp/AD5/AD5_alignedfull_th15/AD5_alignedfull_th15_seed49.png",
+        "dino": 0.5359025001525879,
+        "arcface": 0.16341891884803772
+      },
+      {
+        "seed": 50,
+        "path": "/workspace/exp/AD5/AD5_alignedfull_th15/AD5_alignedfull_th15_seed50.png",
+        "dino": 0.41840386390686035,
+        "arcface": -0.0031650690361857414
+      },
+      {
+        "seed": 51,
+        "path": "/workspace/exp/AD5/AD5_alignedfull_th15/AD5_alignedfull_th15_seed51.png",
+        "dino": 0.45755240321159363,
+        "arcface": 0.030239908024668694
+      }
+    ]
+  },
+  "summary": {
+    "baseline": {
+      "dino": {
+        "mean": 0.3506911486387253,
+        "std": 0.08784926130189255,
+        "n_nan": 0
+      },
+      "arcface": {
+        "mean": 0.006179606355726719,
+        "std": 0.06085792316305761,
+        "n_nan": 0
+      }
+    },
+    "AD5_alignedfull_th15": {
+      "dino": {
+        "mean": 0.472425577044487,
+        "std": 0.05375266683190003,
+        "n_nan": 0
+      },
+      "arcface": {
+        "mean": 0.08668128205463291,
+        "std": 0.08788965431834693,
+        "n_nan": 0
+      }
+    }
+  },
+  "delta_vs_baseline": {
+    "dino": 0.12173442840576171,
+    "arcface": 0.08050167569890619
+  },
+  "timestamp": "2026-09-10 01:00:11"
+}

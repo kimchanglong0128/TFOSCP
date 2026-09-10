@@ -1,0 +1,167 @@
+{
+  "scheme": "AG_iptemp_tau0.5",
+  "note": "IP key scaled by 0.5 (attention temperature)",
+  "requirement": {
+    "arcface_min": 0.144,
+    "dino_max": 0.6
+  },
+  "passed": false,
+  "vram_gb": 13.16,
+  "per_seed": {
+    "baseline": [
+      {
+        "seed": 42,
+        "path": "/workspace/exp/AG/AG_iptemp_tau0.5/baseline_seed42.png",
+        "dino": 0.3659222424030304,
+        "arcface": 0.032768018543720245
+      },
+      {
+        "seed": 43,
+        "path": "/workspace/exp/AG/AG_iptemp_tau0.5/baseline_seed43.png",
+        "dino": 0.44249019026756287,
+        "arcface": 0.05415676161646843
+      },
+      {
+        "seed": 44,
+        "path": "/workspace/exp/AG/AG_iptemp_tau0.5/baseline_seed44.png",
+        "dino": 0.4714880585670471,
+        "arcface": 0.060877058655023575
+      },
+      {
+        "seed": 45,
+        "path": "/workspace/exp/AG/AG_iptemp_tau0.5/baseline_seed45.png",
+        "dino": 0.255088210105896,
+        "arcface": -0.03194067254662514
+      },
+      {
+        "seed": 46,
+        "path": "/workspace/exp/AG/AG_iptemp_tau0.5/baseline_seed46.png",
+        "dino": 0.47773027420043945,
+        "arcface": 0.0021082181483507156
+      },
+      {
+        "seed": 47,
+        "path": "/workspace/exp/AG/AG_iptemp_tau0.5/baseline_seed47.png",
+        "dino": 0.34037891030311584,
+        "arcface": -0.06316927820444107
+      },
+      {
+        "seed": 48,
+        "path": "/workspace/exp/AG/AG_iptemp_tau0.5/baseline_seed48.png",
+        "dino": 0.33512693643569946,
+        "arcface": -0.0861278623342514
+      },
+      {
+        "seed": 49,
+        "path": "/workspace/exp/AG/AG_iptemp_tau0.5/baseline_seed49.png",
+        "dino": 0.23523283004760742,
+        "arcface": 0.09983406960964203
+      },
+      {
+        "seed": 50,
+        "path": "/workspace/exp/AG/AG_iptemp_tau0.5/baseline_seed50.png",
+        "dino": 0.30386894941329956,
+        "arcface": -0.04566333815455437
+      },
+      {
+        "seed": 51,
+        "path": "/workspace/exp/AG/AG_iptemp_tau0.5/baseline_seed51.png",
+        "dino": 0.2795848846435547,
+        "arcface": 0.038953088223934174
+      }
+    ],
+    "AG_iptemp_tau0.5": [
+      {
+        "seed": 42,
+        "path": "/workspace/exp/AG/AG_iptemp_tau0.5/AG_iptemp_tau0.5_seed42.png",
+        "dino": 0.30827462673187256,
+        "arcface": 0.028812391683459282
+      },
+      {
+        "seed": 43,
+        "path": "/workspace/exp/AG/AG_iptemp_tau0.5/AG_iptemp_tau0.5_seed43.png",
+        "dino": 0.603626012802124,
+        "arcface": 0.08633693307638168
+      },
+      {
+        "seed": 44,
+        "path": "/workspace/exp/AG/AG_iptemp_tau0.5/AG_iptemp_tau0.5_seed44.png",
+        "dino": 0.5047094821929932,
+        "arcface": 0.0032644844613969326
+      },
+      {
+        "seed": 45,
+        "path": "/workspace/exp/AG/AG_iptemp_tau0.5/AG_iptemp_tau0.5_seed45.png",
+        "dino": 0.333162784576416,
+        "arcface": 0.04409201443195343
+      },
+      {
+        "seed": 46,
+        "path": "/workspace/exp/AG/AG_iptemp_tau0.5/AG_iptemp_tau0.5_seed46.png",
+        "dino": 0.47008559107780457,
+        "arcface": 0.12305592000484467
+      },
+      {
+        "seed": 47,
+        "path": "/workspace/exp/AG/AG_iptemp_tau0.5/AG_iptemp_tau0.5_seed47.png",
+        "dino": 0.3178975284099579,
+        "arcface": -0.03953319042921066
+      },
+      {
+        "seed": 48,
+        "path": "/workspace/exp/AG/AG_iptemp_tau0.5/AG_iptemp_tau0.5_seed48.png",
+        "dino": 0.36348026990890503,
+        "arcface": -0.05923034995794296
+      },
+      {
+        "seed": 49,
+        "path": "/workspace/exp/AG/AG_iptemp_tau0.5/AG_iptemp_tau0.5_seed49.png",
+        "dino": 0.41245025396347046,
+        "arcface": 0.019943177700042725
+      },
+      {
+        "seed": 50,
+        "path": "/workspace/exp/AG/AG_iptemp_tau0.5/AG_iptemp_tau0.5_seed50.png",
+        "dino": 0.3670305609703064,
+        "arcface": -0.0031621232628822327
+      },
+      {
+        "seed": 51,
+        "path": "/workspace/exp/AG/AG_iptemp_tau0.5/AG_iptemp_tau0.5_seed51.png",
+        "dino": 0.403190940618515,
+        "arcface": 0.030346479266881943
+      }
+    ]
+  },
+  "summary": {
+    "baseline": {
+      "dino": {
+        "mean": 0.3506911486387253,
+        "std": 0.08784926130189255,
+        "n_nan": 0
+      },
+      "arcface": {
+        "mean": 0.006179606355726719,
+        "std": 0.06085792316305761,
+        "n_nan": 0
+      }
+    },
+    "AG_iptemp_tau0.5": {
+      "dino": {
+        "mean": 0.4083908051252365,
+        "std": 0.09359665328218993,
+        "n_nan": 0
+      },
+      "arcface": {
+        "mean": 0.02339257369749248,
+        "std": 0.05406720365042482,
+        "n_nan": 0
+      }
+    }
+  },
+  "delta_vs_baseline": {
+    "dino": 0.05769965648651121,
+    "arcface": 0.01721296734176576
+  },
+  "timestamp": "2026-09-10 00:57:18"
+}
