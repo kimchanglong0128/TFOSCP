@@ -590,3 +590,24 @@ dmd2_4s_999 {'n': 200, 'dz': 280.82, 'de': 26.00, 'ratio': 10.80, 'gnorm': 208.2
 ```
 f. 对照:‖ε‖≈256,‖x₀‖≈170–237。
 g. **假设被否定(但有用)**:θ=15° 只动 ε 的 3.5%(de 8.9),Hyper-SD 输出 latent 已变 195(≈‖x₀‖ 的 82%);到 θ45 各 backbone 的比值 9.4–11.9 几乎相同,dz 随 θ 饱和于 ‖x₀‖ 量级。即**任何 backbone 上低频旋转 ≥15° 后输出都近似是一张新样本**,敏感度不区分 backbone,也不解释 Hyper-UNet-800 的不响应(其原因在 T1/D1:它不缺结构)。这与 D2 的 seed 耦合结果一致(同 seed 教师/学生相似度 ≈ 不同 seed)。论文里可写成:旋转不是"微扰",是对低频子空间的重采样,命题 1 的信息预算(406 nats @45°)就是这个意思。
+
+## D1b · D1 注意力统计修正重跑(10 身份 × 2 seed;`exp/D1b/run.py`,图 `outputs/D1b_teacher_trajectory_attn.png`)
+a. **假设**:身份 token 的注意力(每 token 沿像素归一化,头/token 平均)在脸框内的质量随 t 减小而上升、熵下降(TGATE 式"先散后聚")。
+b. [严格] 与 D1 同轨迹(SDXL 教师,DDIM-50,CFG 5,FaceID),修正列归一化轴;70 个 IP attn2 层按分辨率分组(64×64 / 32×32);脸框取最终图。
+c. `exp/D1b/run.py`。修 bug 1 轮(D1 的归一化轴)。
+e. **原样**:
+```
+t= 981 arcface 0.037 iou 0.72 iou>0.5 1.00 mass64 0.31 mass32 0.32 (box frac 0.34) ent64 1.00
+t= 881 arcface 0.126 iou 0.87 iou>0.5 1.00 mass64 0.34 mass32 0.34 (box frac 0.34) ent64 1.00
+t= 781 arcface 0.214 iou 0.92 iou>0.5 1.00 mass64 0.36 mass32 0.35 (box frac 0.34) ent64 0.99
+t= 681 arcface 0.302 iou 0.93 iou>0.5 1.00 mass64 0.36 mass32 0.36 (box frac 0.34) ent64 0.99
+t= 581 arcface 0.343 iou 0.95 iou>0.5 1.00 mass64 0.37 mass32 0.36 (box frac 0.34) ent64 0.99
+t= 481 arcface 0.356 iou 0.96 iou>0.5 1.00 mass64 0.37 mass32 0.37 (box frac 0.34) ent64 0.99
+t= 381 arcface 0.371 iou 0.97 iou>0.5 1.00 mass64 0.37 mass32 0.37 (box frac 0.34) ent64 0.99
+t= 281 arcface 0.378 iou 0.97 iou>0.5 1.00 mass64 0.37 mass32 0.37 (box frac 0.34) ent64 0.99
+t= 181 arcface 0.382 iou 0.97 iou>0.5 1.00 mass64 0.37 mass32 0.37 (box frac 0.34) ent64 0.99
+t=  81 arcface 0.386 iou 0.98 iou>0.5 1.00 mass64 0.37 mass32 0.37 (box frac 0.34) ent64 0.99
+final teacher arcface 0.382
+```
+f. 对照:机会水平 = 脸框面积占比 0.34;D1(5 seed)的 ArcFace/IoU 曲线在 2 seed 上复现(0.037→0.386,IoU 0.72→0.98)。
+g. **假设被否定**:身份 token 的注意力在整条轨迹上都近似均匀(熵 0.99–1.00,脸框内质量 0.31→0.37,只比面积占比 0.34 高 0.03),没有"先散后聚"。与 H1(输出范数)一致:**FaceID 的 K/V 分支在空间上不选择,身份被均匀写到每个像素,"落在哪"由 query 侧决定**。这反而是主张 B 的直接证据(K/V 侧无空间信息 ⇒ 干预 K/V 不能解决定位),但"注意力聚焦"不能作为机制图;机制图用 D1 的 ArcFace/IoU 曲线 + T1 的 t_start 柱状图。
