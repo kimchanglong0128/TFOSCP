@@ -350,3 +350,87 @@ d. **断言**:冒烟图像素 std > 35 且检出人脸(实测 std 71.6);check_im
 e. **结果(30 id)**:step1 0.340 / method 0.348 / step4(fixed) 0.177;Δ(method−step1) +0.008,p=0.27,positive 18/30;method vs step4 p=9e-15,30/30;step4 nan=0;副指标 sg 0.743→0.722(p=0.27),beach 0.828→0.789(p=0.09),dino 0.273→0.280(p=0.28)。id1:step1 0.453 / method 0.510 / step4 0.239。
 f. **对照**:AE-2(DMD2+FaceID)同协议 +0.040,p=7.8e-4,23/30。
 g. **判定**:(i) 本方法增益在 Hyper-SD 上**未复现**(固定 θ45)——假设"增益跨 backbone"被否定;(ii) Hyper-SD 1 步 UNet(0.340)≥ DMD2 1 步(0.328),且 > 其自身 4 步 LoRA(0.177):"1 步损失由蒸馏范式决定(轨迹 vs 分布匹配)"**被否定**,改为"由具体蒸馏生成器决定"(LoRA+t999 vs 完整 UNet+t800/399);(iii) "多步是天花板"在 Hyper-SD 上不成立。摘要 PDF 已相应改口。未 commit。
+
+# 第六轮:方案卡(next_plan_2026-09-18;每卡 a–g)
+
+> 基础设施说明(2026-09-18):/workspace 卷 60 GB 配额打满,后台任务因日志写不进去而无声退出;pip 缓存已清(3.3 GB),各卡 `gen/` 改为指向容器盘 `/root/gen/<card>` 的软链接(图片可由固定 seed 复现;json/日志仍在卷上)。共享库 `exp/cards/lib.py`(AE-2 协议:FaceID-PlusV2、30 FFHQ × 20 seed、ArcFace buffalo_l det320、DINOv2、CLIP 三选一/海滩探针、配对 t + Wilcoxon)。
+
+## H1 · 注入热图(纯后处理,LCM-LoRA + IP-Adapter base 的 H1 缓存)
+a. **假设**:IP 分支输出的逐像素范数在脸框内的占比随步数上升(多步"落到脸上",1 步"糊满全图")。
+b. [严格] 缓存为每个 IP cross-attn 层、每步的 IP 分支输出范数(HW,),脸框取最终图的检测框;占比 = 框内范数和 / 全图范数和,机会水平 = 框面积占比。[近似] 用输出范数当"注意力落点",不是注意力概率。
+c. `exp/H1/run.py`;图 `outputs/H1_injection_heatmap.png`。
+d. 无 GPU;3 seed × 6 步数 × 70 层。
+e. **原样**:
+```
+steps=1: IP-branch mass in face box 0.234 (first call 0.234, last call 0.234); text-branch 0.247; box area 0.208; ip/text norm ratio 6.20
+steps=2: IP-branch mass in face box 0.229 (first call 0.229, last call 0.229); text-branch 0.246; box area 0.203; ip/text norm ratio 5.89
+steps=3: IP-branch mass in face box 0.227 (first call 0.226, last call 0.227); text-branch 0.246; box area 0.201; ip/text norm ratio 5.70
+steps=4: IP-branch mass in face box 0.232 (first call 0.230, last call 0.233); text-branch 0.251; box area 0.201; ip/text norm ratio 5.62
+steps=6: IP-branch mass in face box 0.225 (first call 0.221, last call 0.225); text-branch 0.242; box area 0.203; ip/text norm ratio 5.52
+steps=8: IP-branch mass in face box 0.224 (first call 0.222, last call 0.224); text-branch 0.243; box area 0.201; ip/text norm ratio 5.51
+```
+f. 对照:机会水平 0.20–0.21;文本分支 0.24–0.25。
+g. **假设被否定**:IP 分支范数在脸框内占比 0.22–0.23,与步数无关,仅略高于面积占比;热图由边缘像素主导(边框亮,脸区反而略暗)。输出范数不是"身份落点"的合适读数,H1 缓存不能作机制主图;改用 D1 的身份 token 注意力列归一化图(脸框质量 + 熵)。ip/text 范数比 5.5–6.2 与旧 H1 结论(身份推力远大于文本)一致。
+
+## S1 · 统计量与命题数值验证(无生成器;`exp/S1/run.py`,`summary.json`)
+a. **假设**:(1) 命题 1:旋转后低频方向的 pushforward 对均匀方向的 KL = (d_L−2)·E_α[log sin α − log sin|α−θ|],且 ≈ −(d_L−2) log cos θ;(2) 保范旋转后的 ε′ 在非径向统计量(相邻像素相关、8×8 patch 均值方差)上接近 iid 高斯,而带替换/线性混合不接近;(4) 命题 2 推论:低频编辑主要改变 x₀ 的低频带。
+b. [严格] (1) 的 MC:α 为随机高斯方向与固定 s 的夹角,公式逐样本求均值;独立检验:直接旋转随机方向、对旋转后夹角作直方图,与密度 ∝ sin^{d−2} 求 KL。[近似] 公式忽略 α<θ 的"越过 s"分支(小 d 时不可忽略);d_L = 4 通道 × 293 个 |f|≤ρ/2 的频点 = 1172。(2) 用 B1 前 5 个身份的源图 latent。(4) 用 B1 已生成的 baseline/方法 图像经 VAE 重编码(n=100 对)。
+c. `exp/S1/run.py`。修 1 轮(小 d 检验 GPU OOM,改 CPU)。
+d. 断言:无;数值见 e。
+e. **原样**:
+```
+d_L = 1172 (bins per channel 293 )
+theta=15 KL exact(MC)      40.6  closed -(dL-2)log cos      40.6  ratio 1.0003
+theta=30 KL exact(MC)     168.5  closed -(dL-2)log cos     168.3  ratio 1.0010
+theta=45 KL exact(MC)     406.0  closed -(dL-2)log cos     405.5  ratio 1.0014
+theta=60 KL exact(MC)     812.5  closed -(dL-2)log cos     811.0  ratio 1.0019
+theta=75 KL exact(MC)    1588.6  closed -(dL-2)log cos    1581.4  ratio 1.0046
+d=  3 theta=30 KL hist 0.3753 formula 0.2467 closed 0.1438
+d=  3 theta=45 KL hist 0.6917 formula 0.4165 closed 0.3466
+d= 10 theta=30 KL hist 1.3658 formula 1.3640 closed 1.1507
+d= 10 theta=45 KL hist 3.5150 formula 3.5138 closed 2.7726
+d= 50 theta=30 KL hist 7.0789 formula 7.0782 closed 6.9044
+d= 50 theta=45 KL hist 17.1654 formula 17.1575 closed 16.6355
+d=200 theta=30 KL hist 28.6436 formula 28.6547 closed 28.4805
+d=200 theta=45 KL hist 69.1163 formula 69.1217 closed 68.6216
+gauss        adj_corr -0.0002 patch_mean_var 0.0154 (iid: 0.0156) patch_var_mean 0.998 std 0.999 norm 255.7
+rot15        adj_corr -0.0002 patch_mean_var 0.0157 (iid: 0.0156) patch_var_mean 0.997 std 0.999 norm 255.7
+rot30        adj_corr -0.0001 patch_mean_var 0.0166 (iid: 0.0156) patch_var_mean 0.996 std 0.999 norm 255.7
+rot45        adj_corr +0.0000 patch_mean_var 0.0179 (iid: 0.0156) patch_var_mean 0.995 std 0.999 norm 255.7
+rot60        adj_corr +0.0001 patch_mean_var 0.0192 (iid: 0.0156) patch_var_mean 0.993 std 0.999 norm 255.7
+rot75        adj_corr +0.0002 patch_mean_var 0.0202 (iid: 0.0156) patch_var_mean 0.992 std 0.998 norm 255.7
+replace_g0.5 adj_corr +0.0878 patch_mean_var 0.1041 (iid: 0.0156) patch_var_mean 1.003 std 1.044 norm 267.7
+replace_g1.0 adj_corr +0.3031 patch_mean_var 0.4001 (iid: 0.0156) patch_var_mean 1.041 std 1.192 norm 306.6
+blend0.3     adj_corr +0.0778 patch_mean_var 0.0454 (iid: 0.0156) patch_var_mean 0.513 std 0.742 norm 190.2
+blend0.5     adj_corr +0.2810 patch_mean_var 0.1090 (iid: 0.0156) patch_var_mean 0.318 std 0.649 norm 166.8
+x0 change (method vs baseline, DMD2, n=100): rel change low band 1.255, high band 1.029; cos low 0.371, cos high 0.497
+```
+f. 对照:iid 高斯行(gauss)与闭式 −(d−2)log cos θ。
+g. **判定**:(1) **命题 1 成立**:d≥10 时公式与直方图 KL 差 <0.2%,d_L=1172 时闭式下界与精确值差 0.03–0.5%(θ≤75°);d=3 时公式偏低 35–40%(越过分支不可忽略),论文里写"d_L≫1 下"的条件。θ=45° 的信息预算 = 406 nats。(2) **成立**:旋转到 75° 相邻相关仍 ≈0、patch 均值方差仅 +30%(θ45:+15%)、std/范数不变;带替换 g=1 相邻相关 0.30、patch 均值方差 ×26、范数 +20%;混合 λ=0.3 std 掉到 0.74。这是 N2 中 replace/blend 行的先验解释。(4) **部分否定**:低频编辑后 x₀ 的高频带也大幅改变(cos 0.50,相对变化 1.03),仅"低频带变得更多"(1.26 vs 1.03)成立;DMD2 不是频率对角映射,命题 2 只能写成线性/高斯理想化下的陈述,并给出这个经验残差。S1 第 3 项(‖G(ε′)−G(ε)‖/‖ε′−ε‖ 随 θ)待 B2 θ 扫描图像出来后后处理。
+
+## B1 · 消融:增益来自身份还是构图(优先级 1;`exp/B1/run.py`,图 `outputs/B1_ablation.png`)
+a. **假设**:参考脸源(A)比 30 身份平均脸(B)、灰色椭圆剪影(C)、他人脸(D)带来更高的 1 步 ArcFace(配对 p<0.05 且 ≥+0.015)⇒ 身份信息经低频进入。
+b. [严格] DMD2 1 步 UNet(t=399)+ FaceID-PlusV2、30 FFHQ × 20 seed、ρ=0.15、θ=45°,四组只换源图,同 seed 同 ε;θ=0 时四组 latent 与 ε 相对误差 0、图像逐像素差 0;重生成的 1 步基线与 AE-2 存图逐像素差 0,A 组与 AE-2 method45 逐像素差 0(完全复现)。[近似] 平均脸 = 30 张参考图各自仿射对齐到固定框后逐像素平均;B 的画布外围是灰色而非海滩(混淆:B 的背景信息少于 A,对 B 不利);D = 循环下一身份对齐到同一框。
+c. 脚本 `exp/B1/run.py`(断点续跑),`plot.py`;共享库 `exp/cards/lib.py`。修 bug 0 轮(配额中断 1 次,见本轮说明)。
+d. 断言:θ=0 相对误差 <2e-3、check_image 全过;未检出:step1 1、A 2、B 0、C 2、D 0(/600)。
+e. **原样**:
+```
+n 30 means {'step1': 0.328, 'A_ref': 0.368, 'B_meanface': 0.384, 'C_silhouette': 0.34, 'D_other': 0.332}
+A_vs_B     Δ-0.0154 SE 0.0100 pos 11/30 p_t 0.136 p_w 0.198
+A_vs_C     Δ+0.0286 SE 0.0115 pos 22/30 p_t 0.0189 p_w 0.012
+A_vs_D     Δ+0.0367 SE 0.0139 pos 19/30 p_t 0.0131 p_w 0.0185
+A_vs_step1 Δ+0.0404 SE 0.0108 pos 23/30 p_t 0.000777 p_w 0.00038
+B_vs_step1 Δ+0.0557 SE 0.0099 pos 27/30 p_t 4.68e-06 p_w 1.42e-06
+C_vs_step1 Δ+0.0118 SE 0.0063 pos 19/30 p_t 0.0709 p_w 0.0803
+D_vs_step1 Δ+0.0037 SE 0.0139 pos 16/30 p_t 0.792 p_w 0.7
+B_meanface vs D_other: Δ+0.0520 pos 23/30 p_t 0.000397 p_w 0.000555
+B_meanface vs C_silhouette: Δ+0.0439 pos 23/30 p_t 0.000447 p_w 0.000283
+D_other vs C_silhouette: Δ-0.0081 pos 15/30 p_t 0.587 p_w 0.73
+zL cos vs A {'B_meanface': 0.48, 'C_silhouette': 0.419, 'D_other': 0.452}
+theta0 max pix diff 0 step1 maxdiff vs AE2 0 nan {'step1': 1, 'A_ref': 2, 'B_meanface': 0, 'C_silhouette': 2, 'D_other': 0}
+p_sunglasses {'step1': 0.731, 'A_ref': 0.73, 'B_meanface': 0.749, 'C_silhouette': 0.554, 'D_other': 0.725}
+p_beach {'step1': 0.709, 'A_ref': 0.663, 'B_meanface': 0.62, 'C_silhouette': 0.835, 'D_other': 0.74}
+dino {'step1': 0.314, 'A_ref': 0.344, 'B_meanface': 0.329, 'C_silhouette': 0.286, 'D_other': 0.314}
+```
+f. 对照:同 seed 1 步基线 0.328(与 AE-2 完全一致);A 组 +0.0404 复现 AE-2 的 +0.040。
+g. **假设被否定**:身份信息**不**经低频进入——去掉身份的平均脸(B)增益 +0.056(27/30,p=5e-6)不低于参考脸(A)+0.040,A−B = −0.015(p=0.14);但也**不是**单纯的构图先验:纯位置的灰椭圆(C)只有 +0.012(p=0.07),另一个真人脸(D)+0.004(p=0.79),B 显著高于 C、D(p<5e-4)。有效成分是**身份中性的人脸结构**(五官布局 + 肤色的低频),身份本身由适配器提供;带别人身份的低频反而与适配器竞争。主张 C 改写为:「初始噪声低频里放一个身份中性的人脸先验,给 query 侧提供落点;身份不走这条通道」。这同时把方法与 MoNO 拉开(无参考方向,固定先验方向,不需要参考图进入 ε),且更简单(不需要参考图对齐)。B 的背景混淆对 B 不利(海滩探针 0.62 vs A 0.663),结论保守;待补 B′(平均脸只裁脸框贴海滩)确认背景探针可恢复。C 组墨镜探针掉到 0.55(灰椭圆盖住眼睛)——剪影不是可用源。

@@ -1,0 +1,33 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/223 [00:00<?, ?it/s]Loading weights:  49%|████▉     | 110/223 [00:00<00:00, 1048.94it/s]Loading weights: 100%|██████████| 223/223 [00:00<00:00, 1427.64it/s]
+/workspace/venv/lib/python3.12/site-packages/insightface/utils/face_align.py:23: FutureWarning: `estimate` is deprecated since version 0.26 and will be removed in version 2.2. Please use `SimilarityTransform.from_estimate` class constructor instead.
+  tform.estimate(lmk, dst)
+d_L = 1172 (bins per channel 293 )
+theta=15 KL exact(MC)      40.6  closed -(dL-2)log cos      40.6  ratio 1.0003
+theta=30 KL exact(MC)     168.5  closed -(dL-2)log cos     168.3  ratio 1.0010
+theta=45 KL exact(MC)     406.0  closed -(dL-2)log cos     405.5  ratio 1.0014
+theta=60 KL exact(MC)     812.5  closed -(dL-2)log cos     811.0  ratio 1.0019
+theta=75 KL exact(MC)    1588.6  closed -(dL-2)log cos    1581.4  ratio 1.0046
+d=  3 theta=30 KL hist 0.3753 formula 0.2467 closed 0.1438
+d=  3 theta=45 KL hist 0.6917 formula 0.4165 closed 0.3466
+d= 10 theta=30 KL hist 1.3658 formula 1.3640 closed 1.1507
+d= 10 theta=45 KL hist 3.5150 formula 3.5138 closed 2.7726
+d= 50 theta=30 KL hist 7.0789 formula 7.0782 closed 6.9044
+d= 50 theta=45 KL hist 17.1654 formula 17.1575 closed 16.6355
+d=200 theta=30 KL hist 28.6436 formula 28.6547 closed 28.4805
+d=200 theta=45 KL hist 69.1163 formula 69.1217 closed 68.6216
+/workspace/venv/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py:205: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `hf_hub_download`. Downloading to a local directory does not use symlinks anymore.
+  warnings.warn(
+sources: 5
+gauss        adj_corr -0.0002 patch_mean_var 0.0154 (iid: 0.0156) patch_var_mean 0.998 std 0.999 norm 255.7
+rot15        adj_corr -0.0002 patch_mean_var 0.0157 (iid: 0.0156) patch_var_mean 0.997 std 0.999 norm 255.7
+rot30        adj_corr -0.0001 patch_mean_var 0.0166 (iid: 0.0156) patch_var_mean 0.996 std 0.999 norm 255.7
+rot45        adj_corr +0.0000 patch_mean_var 0.0179 (iid: 0.0156) patch_var_mean 0.995 std 0.999 norm 255.7
+rot60        adj_corr +0.0001 patch_mean_var 0.0192 (iid: 0.0156) patch_var_mean 0.993 std 0.999 norm 255.7
+rot75        adj_corr +0.0002 patch_mean_var 0.0202 (iid: 0.0156) patch_var_mean 0.992 std 0.998 norm 255.7
+replace_g0.5 adj_corr +0.0878 patch_mean_var 0.1041 (iid: 0.0156) patch_var_mean 1.003 std 1.044 norm 267.7
+replace_g1.0 adj_corr +0.3031 patch_mean_var 0.4001 (iid: 0.0156) patch_var_mean 1.041 std 1.192 norm 306.6
+blend0.3     adj_corr +0.0778 patch_mean_var 0.0454 (iid: 0.0156) patch_var_mean 0.513 std 0.742 norm 190.2
+blend0.5     adj_corr +0.2810 patch_mean_var 0.1090 (iid: 0.0156) patch_var_mean 0.318 std 0.649 norm 166.8
+x0 change (method vs baseline, DMD2, n=100): rel change low band 1.255, high band 1.029; cos low 0.371, cos high 0.497
+DONE
