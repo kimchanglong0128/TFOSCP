@@ -30,7 +30,7 @@ for k, rimg in ids.items():
     boxes = [b for b in bboxes.values() if b is not None]
     if len(boxes) < 5: print(k, "few faces, skipped", flush=True); continue
     src = make_source(rimg, boxes); z = encode(pipe, src); zL = split(z, RHO)[0]; tb = np.array(boxes).mean(0)
-    per = B1[k]['step1']['per_seed']; best_s = SEEDS[int(np.nanargmax(per))]; eb = noise_for(best_s)
+    per = [x if x is not None else -1.0 for x in B1[k]['step1']['per_seed']]; best_s = SEEDS[int(np.argmax(per))]; eb = noise_for(best_s)   # None = undetected face
     def transplant(s):
         e = noise_for(s).clone(); x1, y1, x2, y2 = [int(v / 8) for v in tb]; e[:, :, y1:y2, x1:x2] = eb[:, :, y1:y2, x1:x2]; return e
     def sdedit(s, norm):
