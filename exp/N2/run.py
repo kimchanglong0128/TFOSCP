@@ -41,14 +41,14 @@ for k, rimg in ids.items():
         e = noise_for(s); return (split(e, RHO)[1] + g_ * zL).to(e.dtype)
     def select(s):
         # seed-dependent library slice of 20 candidates so different seeds pick different noises
-        cand = list(range((s - 42) * 9, (s - 42) * 9 + 20))   # 20 candidates per seed, max index 191 < 200; j = max(cand, key=lambda i: float((LIB_L[i] * zL).sum() / (LIB_L[i].norm() * zL.norm()))); return LIB[j]
+        cand = list(range((s - 42) * 9, (s - 42) * 9 + 20)); j = max(cand, key=lambda i: float((LIB_L[i] * zL).sum() / (LIB_L[i].norm() * zL.norm()))); return LIB[j]   # 20 candidates per seed, max index 191 < 200
     groups = {'replace_g0.5': lambda s: replace(s, 0.5), 'replace_g1.0': lambda s: replace(s, 1.0), 'blend0.3_raw': lambda s: blend(s, False), 'blend0.3_norm': lambda s: blend(s, True),
               'patch_transplant': transplant, 'sdedit_raw': lambda s: sdedit(s, False), 'sdedit_norm': lambda s: sdedit(s, True), 'noise_select': select}
     for gname, fn in groups.items():
         paths = []
         for s in SEEDS:
             lat = fn(s); assert torch.isfinite(lat).all(); img = gen(pipe, emb, lat, s, T); q = f'{OUT}/gen/{k}_{gname}_s{s}.png'; img.save(q); check_image(img); paths.append(q)
-        R[k][gname] = metrics(paths, remb, rdino, pad_recover=True); R[k][gname]['latent_std'] = float(np.mean([float(fn(s).float().std()) for s in SEEDS[:3]])); rep(k, gname, R[k][gname])
+        R[k][gname] = metrics(paths, remb, rdino, pad_recover=True); R[k][gname]['latent_std'] = float(np.mean([float(fn(s).float().std()) for s in SEEDS[:3]])); rep(k, gname, R[k][gname]); json.dump(R, open(f'{OUT}/results.json', 'w'), indent=1)
     # mask gate (oracle box from same-seed baseline) and two-pass
     paths, paths2 = [], []
     for s in SEEDS:
