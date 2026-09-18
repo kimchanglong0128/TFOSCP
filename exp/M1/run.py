@@ -15,10 +15,10 @@ ids = load_ids(); keys = list(ids)
 # offline backgrounds with the 4-step DMD2 UNet, text only (as AD6 did for the beach)
 os.makedirs(f'{OUT}/bg', exist_ok=True)
 if not all(os.path.exists(f'{OUT}/bg/{n}.png') for n in PROMPTS):
-    p4 = build_faceid("dmd2_sdxl_4step_unet_fp16.safetensors", True, lora=False); p4.set_ip_adapter_scale(0.0)
-    zero = [torch.zeros(1, 1, 512, device='cuda', dtype=torch.float16)]; layer = p4.unet.encoder_hid_proj.image_projection_layers[0]; layer.clip_embeds = torch.zeros(1, 257, 1280, device='cuda', dtype=torch.float16); layer.shortcut = True
+    p4 = build_faceid("dmd2_sdxl_4step_unet_fp16.safetensors", True, lora=False); emb0 = face_embeds(p4, ids['id00']); p4.set_ip_adapter_scale(0.0)   # real-shaped embeds, adapter scale 0 -> text only
     for n, P in PROMPTS.items():
-        g = torch.Generator('cuda').manual_seed(7); p4(prompt=P['bg'], negative_prompt="person, face, people", timesteps=[999, 749, 499, 249], guidance_scale=0, ip_adapter_image_embeds=zero, generator=g).images[0].save(f'{OUT}/bg/{n}.png')
+        g = torch.Generator('cuda').manual_seed(7); im = p4(prompt=P['bg'], timesteps=[999, 749, 499, 249], guidance_scale=0, ip_adapter_image_embeds=emb0, generator=g).images[0]
+        assert m.face_bbox(cv2.cvtColor(np.asarray(im), cv2.COLOR_RGB2BGR)) is None, f"background for {n} contains a face"; im.save(f'{OUT}/bg/{n}.png')
     del p4; torch.cuda.empty_cache()
 pipe = build_faceid("dmd2_sdxl_1step_unet_fp16.bin", False, lora=False)
 def probs2(paths, caps): return float(clip_probs(paths, caps)[0])
