@@ -341,3 +341,12 @@ f. **对照(plus-face,同 30 身份)**:1 步 0.225 / 方法 0.246 / 4 步 0.264,
 - **方法的增益随 adapter 增大**:+0.021 → **+0.040**,显著性从 p=0.01 到 p<0.001,23/30 正向;在强 adapter 上 1 NFE 的身份**超过 4 步**(0.368 vs 0.336)且属性/背景/DINO 无代价。绝对值 0.37 进入同人区间。
 - **B 在 30 身份基准上达成**(以 4 步为多步参照、以三选一 CLIP 与 DINO 为属性/复制守卫)——条件:4 步组 27 张未检出需解释。
 **4 步未检出核查(AE-2)**:27 张全部是极端特写(脸超出画面),非坏图;加 30% 灰边缩小后 23/27 检出,分数 0.01–0.31。修正后 4 步均值 0.336→**0.331**;方法 vs 修正 4 步 Δ **+0.037,p=0.002,22/30**;1 步 vs 4 步 −1%(p=0.77)。**B 的判定成立**:DMD2 + FaceID-PlusV2、30 FFHQ 身份、20 seed:方法(1 NFE,0 额外前向)ArcFace 0.368,高于 1 步(+0.040,p<0.001,23/30)和 4 步(+0.037,p=0.002,22/30);属性、背景、DINO 无代价。待第二 backbone(Hyper-SD)复核。
+
+## AE-3 修正 · Hyper-SD 4 步基线重跑(LoRA 合并顺序修复,2026-09-10)
+a. **假设**:AE-3 首轮 4 步基线全灰(ArcFace 0.108、251/600 无脸)是管线错误而非模型性质;修复后 Hyper-SD 上本方法的增益(+0.008)是否显著不受影响。
+b. **推导**:[严格] `load_ip_adapter` 在 `fuse_lora` 之后调用会触发 diffusers 的 unmerge,4 步实际跑的是无 Hyper-SD 权重的原版 SDXL;官方 N 步 LoRA 用法为 DDIM trailing、不加 eta。修复:先挂 FaceID,再 load+fuse LoRA,去掉 eta=1。冒烟检查:eta=0 亦为灰图 → 原因确认为 unmerge 而非 eta。
+c. **脚本**:/workspace/exp/AE3/fix4.py(fix4_defs.py 为 run.py 前 54 行);只重生成 4 步组(id1 + 30 FFHQ × 20 seed),重打分,results.json 更新(旧值备份 results_step4_broken.json),summary_fixed.json。
+d. **断言**:冒烟图像素 std > 35 且检出人脸(实测 std 71.6);check_image;范数断言沿用。
+e. **结果(30 id)**:step1 0.340 / method 0.348 / step4(fixed) 0.177;Δ(method−step1) +0.008,p=0.27,positive 18/30;method vs step4 p=9e-15,30/30;step4 nan=0;副指标 sg 0.743→0.722(p=0.27),beach 0.828→0.789(p=0.09),dino 0.273→0.280(p=0.28)。id1:step1 0.453 / method 0.510 / step4 0.239。
+f. **对照**:AE-2(DMD2+FaceID)同协议 +0.040,p=7.8e-4,23/30。
+g. **判定**:(i) 本方法增益在 Hyper-SD 上**未复现**(固定 θ45)——假设"增益跨 backbone"被否定;(ii) Hyper-SD 1 步 UNet(0.340)≥ DMD2 1 步(0.328),且 > 其自身 4 步 LoRA(0.177):"1 步损失由蒸馏范式决定(轨迹 vs 分布匹配)"**被否定**,改为"由具体蒸馏生成器决定"(LoRA+t999 vs 完整 UNet+t800/399);(iii) "多步是天花板"在 Hyper-SD 上不成立。摘要 PDF 已相应改口。未 commit。
