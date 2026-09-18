@@ -1,0 +1,983 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/223 [00:00<?, ?it/s]Loading weights:  39%|███▊      | 86/223 [00:00<00:00, 831.00it/s]Loading weights:  76%|███████▌  | 170/223 [00:00<00:00, 831.67it/s]Loading weights: 100%|██████████| 223/223 [00:00<00:00, 939.14it/s]
+/workspace/venv/lib/python3.12/site-packages/insightface/utils/face_align.py:23: FutureWarning: `estimate` is deprecated since version 0.26 and will be removed in version 2.2. Please use `SimilarityTransform.from_estimate` class constructor instead.
+  tform.estimate(lmk, dst)
+Loading weights:   0%|          | 0/590 [00:00<?, ?it/s]Loading weights:  11%|█         | 66/590 [00:00<00:00, 562.39it/s]Loading weights:  23%|██▎       | 137/590 [00:00<00:00, 632.64it/s]Loading weights:  37%|███▋      | 221/590 [00:00<00:00, 720.55it/s]Loading weights:  50%|████▉     | 294/590 [00:00<00:00, 694.35it/s]Loading weights:  62%|██████▏   | 364/590 [00:00<00:00, 628.03it/s]Loading weights:  76%|███████▋  | 450/590 [00:00<00:00, 695.52it/s]Loading weights:  88%|████████▊ | 521/590 [00:00<00:00, 694.06it/s]Loading weights: 100%|██████████| 590/590 [00:00<00:00, 686.82it/s]
+/workspace/venv/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py:205: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `hf_hub_download`. Downloading to a local directory does not use symlinks anymore.
+  warnings.warn(
+There are modules in UNet2DConditionModel that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+Loading weights:   0%|          | 0/520 [00:00<?, ?it/s]Loading weights:   2%|▏         | 9/520 [00:00<00:11, 42.90it/s]Loading weights:   3%|▎         | 14/520 [00:00<00:12, 41.25it/s]Loading weights:   5%|▌         | 27/520 [00:00<00:07, 62.78it/s]Loading weights:   8%|▊         | 41/520 [00:00<00:06, 70.98it/s]Loading weights:  13%|█▎        | 67/520 [00:00<00:04, 108.79it/s]Loading weights:  15%|█▌        | 79/520 [00:00<00:04, 106.84it/s]Loading weights:  17%|█▋        | 90/520 [00:01<00:04, 101.76it/s]Loading weights:  20%|██        | 105/520 [00:01<00:04, 83.74it/s]Loading weights:  23%|██▎       | 121/520 [00:01<00:04, 99.22it/s]Loading weights:  26%|██▋       | 137/520 [00:01<00:04, 92.56it/s]Loading weights:  29%|██▉       | 153/520 [00:01<00:03, 97.04it/s]Loading weights:  32%|███▎      | 169/520 [00:01<00:03, 88.18it/s]Loading weights:  36%|███▌      | 187/520 [00:02<00:03, 86.97it/s]Loading weights:  39%|███▉      | 203/520 [00:02<00:03, 89.04it/s]Loading weights:  42%|████▏     | 219/520 [00:02<00:02, 101.31it/s]Loading weights:  46%|████▌     | 239/520 [00:02<00:02, 119.55it/s]Loading weights:  49%|████▊     | 253/520 [00:02<00:03, 87.13it/s] Loading weights:  51%|█████     | 265/520 [00:02<00:02, 87.40it/s]Loading weights:  54%|█████▍    | 281/520 [00:03<00:02, 95.71it/s]Loading weights:  57%|█████▋    | 297/520 [00:03<00:02, 89.94it/s]Loading weights:  63%|██████▎   | 329/520 [00:03<00:01, 125.59it/s]Loading weights:  66%|██████▌   | 343/520 [00:03<00:01, 121.48it/s]Loading weights:  68%|██████▊   | 356/520 [00:03<00:01, 96.99it/s] Loading weights:  71%|███████   | 367/520 [00:03<00:01, 98.94it/s]Loading weights:  73%|███████▎  | 378/520 [00:04<00:01, 94.49it/s]Loading weights:  75%|███████▍  | 388/520 [00:04<00:01, 94.53it/s]Loading weights:  77%|███████▋  | 398/520 [00:04<00:01, 90.50it/s]Loading weights:  79%|███████▊  | 409/520 [00:04<00:01, 86.70it/s]Loading weights:  80%|████████  | 418/520 [00:04<00:01, 74.06it/s]Loading weights:  83%|████████▎ | 431/520 [00:04<00:01, 85.23it/s]Loading weights:  85%|████████▍ | 441/520 [00:04<00:00, 84.42it/s]Loading weights:  88%|████████▊ | 457/520 [00:05<00:00, 77.33it/s]Loading weights:  91%|█████████ | 473/520 [00:05<00:00, 93.75it/s]Loading weights:  93%|█████████▎| 484/520 [00:05<00:00, 86.34it/s]Loading weights:  95%|█████████▌| 494/520 [00:05<00:00, 81.01it/s]Loading weights:  99%|█████████▉| 515/520 [00:05<00:00, 109.07it/s]Loading weights: 100%|██████████| 520/520 [00:05<00:00, 93.82it/s] 
+Loading pipeline components...:   0%|          | 0/7 [00:00<?, ?it/s]Loading pipeline components...:  14%|█▍        | 1/7 [00:00<00:00,  7.78it/s]
+Loading weights:   0%|          | 0/517 [00:00<?, ?it/s][A
+Loading weights:  17%|█▋        | 87/517 [00:00<00:00, 826.65it/s][A
+Loading weights:  34%|███▎      | 174/517 [00:00<00:00, 846.85it/s][A
+Loading weights:  52%|█████▏    | 269/517 [00:00<00:00, 877.21it/s][A
+Loading weights:  69%|██████▉   | 357/517 [00:00<00:00, 828.06it/s][A
+Loading weights:  85%|████████▌ | 441/517 [00:00<00:00, 692.61it/s][ALoading weights: 100%|██████████| 517/517 [00:00<00:00, 768.26it/s]
+Loading pipeline components...:  43%|████▎     | 3/7 [00:01<00:01,  2.47it/s]Loading pipeline components...:  71%|███████▏  | 5/7 [00:01<00:00,  4.29it/s]Loading pipeline components...:  86%|████████▌ | 6/7 [00:01<00:00,  4.11it/s]
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s][A
+Loading weights:  41%|████▏     | 81/196 [00:00<00:00, 743.11it/s][A
+Loading weights:  82%|████████▏ | 160/196 [00:00<00:00, 763.44it/s][ALoading weights: 100%|██████████| 196/196 [00:00<00:00, 838.00it/s]
+Loading pipeline components...: 100%|██████████| 7/7 [00:01<00:00,  3.77it/s]Loading pipeline components...: 100%|██████████| 7/7 [00:01<00:00,  3.75it/s]
+The config attributes {'skip_prk_steps': True} were passed to LCMScheduler, but are not expected and will be ignored. Please verify your scheduler_config.json configuration file.
+There are modules in UNet2DConditionModel that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+No LoRA keys associated to CLIPTextModel found with the prefix='text_encoder'. This is safe to ignore if LoRA state dict didn't originally have any CLIPTextModel related params. You can also try specifying `prefix=None` to resolve the warning. Otherwise, open an issue if you think it's unexpected: https://github.com/huggingface/diffusers/issues/new
+No LoRA keys associated to CLIPTextModelWithProjection found with the prefix='text_encoder_2'. This is safe to ignore if LoRA state dict didn't originally have any CLIPTextModelWithProjection related params. You can also try specifying `prefix=None` to resolve the warning. Otherwise, open an issue if you think it's unexpected: https://github.com/huggingface/diffusers/issues/new
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+/workspace/venv/lib/python3.12/site-packages/diffusers/pipelines/stable_diffusion_xl/pipeline_stable_diffusion_xl.py:748: FutureWarning: `upcast_vae` is deprecated and will be removed in version 1.0.0. `upcast_vae` is deprecated. Please use `pipe.vae.to(torch.float32)`. For more details, please refer to: https://github.com/huggingface/diffusers/pull/12619#issue-3606633695.
+  deprecate(
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id00 step1          arcface +0.283±0.068 nan=0 dino 0.38 sg 0.80 beach 0.86
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id00 method         arcface +0.277±0.046 nan=0 dino 0.36 sg 0.94 beach 0.74
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id00 teacher_xt401  arcface +0.413±0.036 nan=0 dino 0.36 sg 0.87 beach 0.87
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id00 teacher_xt601  arcface +0.442±0.038 nan=0 dino 0.35 sg 0.81 beach 0.83
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id00 teacher_xt801  arcface +0.384±0.025 nan=0 dino 0.37 sg 0.64 beach 0.82
+id00 teacher_final  arcface +0.387±0.064 nan=0 dino 0.33 sg 0.92 beach 0.94
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id01 step1          arcface +0.285±0.045 nan=0 dino 0.17 sg 0.82 beach 0.69
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id01 method         arcface +0.302±0.063 nan=0 dino 0.17 sg 0.64 beach 0.80
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id01 teacher_xt401  arcface +0.255±0.055 nan=0 dino 0.14 sg 0.91 beach 0.90
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id01 teacher_xt601  arcface +0.272±0.053 nan=0 dino 0.14 sg 0.78 beach 0.87
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id01 teacher_xt801  arcface +0.291±0.022 nan=0 dino 0.16 sg 0.75 beach 0.86
+id01 teacher_final  arcface +0.300±0.054 nan=0 dino 0.12 sg 0.80 beach 0.98
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id02 step1          arcface +0.300±0.106 nan=0 dino 0.70 sg 0.88 beach 0.79
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id02 method         arcface +0.295±0.056 nan=0 dino 0.80 sg 0.82 beach 0.87
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id02 teacher_xt401  arcface +0.402±0.086 nan=0 dino 0.71 sg 0.94 beach 0.48
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id02 teacher_xt601  arcface +0.389±0.069 nan=0 dino 0.74 sg 0.84 beach 0.62
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id02 teacher_xt801  arcface +0.453±0.074 nan=0 dino 0.73 sg 0.79 beach 0.70
+id02 teacher_final  arcface +0.465±0.095 nan=0 dino 0.70 sg 0.87 beach 0.89
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id03 step1          arcface +0.205±0.046 nan=0 dino 0.25 sg 0.69 beach 0.71
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id03 method         arcface +0.316±0.045 nan=0 dino 0.22 sg 0.82 beach 0.14
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id03 teacher_xt401  arcface +0.239±0.055 nan=0 dino 0.19 sg 0.90 beach 0.59
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id03 teacher_xt601  arcface +0.242±0.086 nan=0 dino 0.19 sg 0.88 beach 0.58
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id03 teacher_xt801  arcface +0.256±0.073 nan=0 dino 0.22 sg 0.87 beach 0.33
+id03 teacher_final  arcface +0.287±0.058 nan=0 dino 0.18 sg 0.70 beach 0.90
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id04 step1          arcface +0.341±0.078 nan=0 dino 0.29 sg 0.89 beach 0.61
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id04 method         arcface +0.419±0.017 nan=0 dino 0.31 sg 0.77 beach 0.23
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id04 teacher_xt401  arcface +0.421±0.049 nan=0 dino 0.28 sg 0.82 beach 0.22
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id04 teacher_xt601  arcface +0.394±0.063 nan=0 dino 0.28 sg 0.69 beach 0.29
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id04 teacher_xt801  arcface +0.419±0.060 nan=0 dino 0.26 sg 0.75 beach 0.34
+id04 teacher_final  arcface +0.419±0.052 nan=0 dino 0.24 sg 0.72 beach 0.41
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id05 step1          arcface +0.232±0.083 nan=0 dino 0.24 sg 0.71 beach 0.96
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id05 method         arcface +0.239±0.026 nan=0 dino 0.23 sg 0.86 beach 0.97
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id05 teacher_xt401  arcface +0.273±0.059 nan=0 dino 0.24 sg 0.84 beach 0.93
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id05 teacher_xt601  arcface +0.295±0.054 nan=0 dino 0.24 sg 0.85 beach 0.87
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id05 teacher_xt801  arcface +0.340±0.034 nan=0 dino 0.24 sg 0.81 beach 0.92
+id05 teacher_final  arcface +0.280±0.093 nan=0 dino 0.25 sg 0.71 beach 0.92
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id06 step1          arcface +0.370±0.061 nan=0 dino 0.30 sg 0.91 beach 0.94
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id06 method         arcface +0.346±0.035 nan=0 dino 0.32 sg 0.95 beach 0.91
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id06 teacher_xt401  arcface +0.243±0.060 nan=1 dino 0.18 sg 0.97 beach 0.72
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id06 teacher_xt601  arcface +0.224±0.088 nan=1 dino 0.17 sg 0.96 beach 0.72
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id06 teacher_xt801  arcface +0.200±0.087 nan=1 dino 0.19 sg 0.94 beach 0.66
+id06 teacher_final  arcface +0.347±0.055 nan=1 dino 0.18 sg 0.95 beach 0.86
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id07 step1          arcface +0.397±0.089 nan=0 dino 0.57 sg 0.41 beach 0.64
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id07 method         arcface +0.424±0.036 nan=0 dino 0.54 sg 0.28 beach 0.17
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id07 teacher_xt401  arcface +0.517±0.048 nan=0 dino 0.55 sg 0.38 beach 0.55
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id07 teacher_xt601  arcface +0.481±0.077 nan=0 dino 0.53 sg 0.35 beach 0.64
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id07 teacher_xt801  arcface +0.454±0.051 nan=0 dino 0.54 sg 0.28 beach 0.48
+id07 teacher_final  arcface +0.539±0.019 nan=0 dino 0.51 sg 0.30 beach 0.56
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id08 step1          arcface +0.331±0.086 nan=0 dino 0.29 sg 0.43 beach 0.62
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id08 method         arcface +0.387±0.023 nan=0 dino 0.30 sg 0.46 beach 0.18
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id08 teacher_xt401  arcface +0.367±0.034 nan=0 dino 0.29 sg 0.73 beach 0.56
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id08 teacher_xt601  arcface +0.350±0.051 nan=0 dino 0.28 sg 0.65 beach 0.54
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id08 teacher_xt801  arcface +0.385±0.030 nan=0 dino 0.28 sg 0.60 beach 0.59
+id08 teacher_final  arcface +0.427±0.060 nan=0 dino 0.26 sg 0.53 beach 0.97
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id09 step1          arcface +0.357±0.137 nan=0 dino 0.43 sg 0.70 beach 0.60
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id09 method         arcface +0.233±0.039 nan=0 dino 0.49 sg 0.69 beach 0.93
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id09 teacher_xt401  arcface +0.349±0.123 nan=0 dino 0.32 sg 0.92 beach 0.84
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id09 teacher_xt601  arcface +0.404±0.082 nan=0 dino 0.33 sg 0.85 beach 0.61
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+The first timestep on the custom timestep schedule is 399, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+id09 teacher_xt801  arcface +0.443±0.056 nan=0 dino 0.34 sg 0.73 beach 0.73
+id09 teacher_final  arcface +0.395±0.123 nan=0 dino 0.34 sg 0.80 beach 0.95
+{
+ "groups": {
+  "method": {
+   "mean_a": 0.3238557717204094,
+   "mean_b": 0.31027825325727465,
+   "delta": 0.013577518463134767,
+   "delta_se": 0.02020487634539797,
+   "positive": 6,
+   "n": 10,
+   "p_t": 0.518465226038762,
+   "p_wilcoxon": 0.375
+  },
+  "teacher_xt401": {
+   "mean_a": 0.34788945235311985,
+   "mean_b": 0.31027825325727465,
+   "delta": 0.037611199095845226,
+   "delta_se": 0.024675625612592823,
+   "positive": 7,
+   "n": 10,
+   "p_t": 0.16178898092931793,
+   "p_wilcoxon": 0.130859375
+  },
+  "teacher_xt601": {
+   "mean_a": 0.349337014555931,
+   "mean_b": 0.31027825325727465,
+   "delta": 0.03905876129865645,
+   "delta_se": 0.025176226488826205,
+   "positive": 8,
+   "n": 10,
+   "p_t": 0.1552168029746677,
+   "p_wilcoxon": 0.083984375
+  },
+  "teacher_xt801": {
+   "mean_a": 0.36259881827980284,
+   "mean_b": 0.31027825325727465,
+   "delta": 0.052320565022528166,
+   "delta_se": 0.0276783190830456,
+   "positive": 9,
+   "n": 10,
+   "p_t": 0.0912912133178778,
+   "p_wilcoxon": 0.083984375
+  },
+  "teacher_final": {
+   "mean_a": 0.38451029613614085,
+   "mean_b": 0.31027825325727465,
+   "delta": 0.07423204287886619,
+   "delta_se": 0.018029612434605907,
+   "positive": 9,
+   "n": 10,
+   "p_t": 0.00260870654038222,
+   "p_wilcoxon": 0.005859375
+  }
+ },
+ "seed_consistency": {
+  "dmd2_1s_399": {
+   "n": 50,
+   "dino": 0.7165759393572807,
+   "mse": 5597.81607421875
+  },
+  "hyper_unet_800": {
+   "n": 50,
+   "dino": 0.7459081852436066,
+   "mse": 5791.09521484375
+  },
+  "lcm_lora_999": {
+   "n": 50,
+   "dino": 0.5064062690734863,
+   "mse": 2676.0420336914062
+  },
+  "hyper_lora_999": {
+   "n": 50,
+   "dino": 0.7335981851816178,
+   "mse": 5950.631528320312
+  },
+  "teacher_vs_other_seed": {
+   "n": 50,
+   "dino": 0.7404349154233932,
+   "mse": 4433.744741210938
+  }
+ },
+ "means": {
+  "step1": 0.31027825325727465,
+  "method": 0.3238557717204094,
+  "teacher_xt401": 0.34788945235311985,
+  "teacher_xt601": 0.349337014555931,
+  "teacher_xt801": 0.36259881827980284,
+  "teacher_final": 0.38451029613614085
+ },
+ "nan": {
+  "step1": 0,
+  "method": 0,
+  "teacher_xt401": 1,
+  "teacher_xt601": 1,
+  "teacher_xt801": 1,
+  "teacher_final": 1
+ },
+ "sg": {
+  "step1": 0.7244363278150558,
+  "method": 0.7218845069408417,
+  "teacher_xt401": 0.82671317756176,
+  "teacher_xt601": 0.766945767402649,
+  "teacher_xt801": 0.7155875355005265,
+  "teacher_final": 0.7299887061119079
+ },
+ "xt401_vs_method": {
+  "mean_a": 0.34788945235311985,
+  "mean_b": 0.3238557717204094,
+  "delta": 0.024033680632710462,
+  "delta_se": 0.027192922788933416,
+  "positive": 6,
+  "n": 10,
+  "p_t": 0.39978635179558913,
+  "p_wilcoxon": 0.375
+ },
+ "xt401_vs_teacher": {
+  "mean_a": 0.34788945235311985,
+  "mean_b": 0.38451029613614085,
+  "delta": -0.03662084378302096,
+  "delta_se": 0.011733487697630616,
+  "positive": 2,
+  "n": 10,
+  "p_t": 0.012297724136183385,
+  "p_wilcoxon": 0.01953125
+ }
+}
+DONE

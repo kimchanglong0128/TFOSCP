@@ -502,3 +502,29 @@ final teacher arcface 0.385
 ```
 f. 对照:最终 x₀ 的 ArcFace 0.385(50 步教师);学生 1 步:DMD2-399 0.328、Hyper-UNet-800 0.340、Hyper-LoRA-999 0.148、LCM-999 0.044。
 g. **判定(部分成立,比假设更极端)**:脸框在**第一步**(t=981)的 x̂₀ 上就已 IoU 0.74、t=881 0.87——教师的构图由 ε 的低频在最早一两步决定(与"低频=布局"共识一致);ArcFace 则从 0.03 缓慢爬升,t≈581 达 0.35、t≈381 达 0.38 才接近终值。所以"结构可恢复"的分界不在 700 而在 ~900,"身份可恢复"在 ~400–600。三个起点都在结构分界**之后**(999 几乎刚好在分界上),因此 T1 里 LoRA-999 与 UNet-800/399 的差别不能只用"起点是否过了结构分界"解释,还要加容量与训练目标(与 T1 判定一致)。**注意力统计 bug**:列归一化沿 token 轴而非像素轴,4-token softmax 平均后恒为 1/4,mass/熵为常数、无信息;已修正为沿像素归一化,作 D1b(10 身份 × 2 seed)排在队尾。
+
+## D2 · 区分两种解释:query 缺结构 vs OPAD 的轨迹映射丢失(优先级 5;`exp/D2/run.py`)
+a. **假设**:(本文)给 DMD2 1 步模型任何噪声一致的结构,身份都回升:教师 t=401 中间态(单位标准差缩放)作输入 ≥ 本方法 ≈ 教师终值;(OPAD)DMD 丢失逐轨迹映射,即使给足结构 DMD2 仍显著低于教师。附加:seed 一致性 student(ε) vs teacher(ε),预期 CM 型(LCM/Hyper)高于 DMD 型。
+b. [严格] DMD2 1 步 UNet(t=399)+ FaceID,10 身份 × 5 seed,ε 与 D1 相同;输入组:ε、rotate(ε→z_ref,45°)、教师 x_t(401/601/801)÷ 全局标准差;教师终值 = D1 的 50 步 x₀。[近似] "尺度对到训练 σ_t"用全局 std 归一(DMD2 一步生成器训练输入为单位噪声);n=10 功效低;一致性用 DINOv2 余弦与像素 MSE(无 lpips 包),对照为教师不同 seed 之间的余弦。
+c. `exp/D2/run.py`。修 bug 0 轮。
+d. 断言:每个输入 latent 全局 std 与 1 相差 <0.05;check_image。
+e. **原样**:
+```
+means {'step1': 0.31, 'method': 0.324, 'teacher_xt401': 0.348, 'teacher_xt601': 0.349, 'teacher_xt801': 0.363, 'teacher_final': 0.385}
+nan {'step1': 0, 'method': 0, 'teacher_xt401': 1, 'teacher_xt601': 1, 'teacher_xt801': 1, 'teacher_final': 1}
+sg {'step1': 0.72, 'method': 0.72, 'teacher_xt401': 0.83, 'teacher_xt601': 0.77, 'teacher_xt801': 0.72, 'teacher_final': 0.73}
+method         vs step1 Δ+0.0136 p_t 0.518 p_w 0.375 6/10
+teacher_xt401  vs step1 Δ+0.0376 p_t 0.162 p_w 0.131 7/10
+teacher_xt601  vs step1 Δ+0.0391 p_t 0.155 p_w 0.084 8/10
+teacher_xt801  vs step1 Δ+0.0523 p_t 0.0913 p_w 0.084 9/10
+teacher_final  vs step1 Δ+0.0742 p_t 0.00261 p_w 0.00586 9/10
+xt401_vs_method  Δ+0.0240 p_t 0.4 6/10
+xt401_vs_teacher Δ-0.0366 p_t 0.0123 2/10
+consistency dmd2_1s_399            n=50 dino 0.7165759393572807 mse 5597.81607421875
+consistency hyper_unet_800         n=50 dino 0.7459081852436066 mse 5791.09521484375
+consistency lcm_lora_999           n=50 dino 0.5064062690734863 mse 2676.0420336914062
+consistency hyper_lora_999         n=50 dino 0.7335981851816178 mse 5950.631528320312
+consistency teacher_vs_other_seed  n=50 dino 0.7404349154233932 mse 4433.744741210938
+```
+f. 对照:同 seed 1 步基线 0.310(这 10 身份 × 5 seed 的子集);教师终值 0.385。
+g. **判定(两种解释各对一半,n=10 功效不足)**:教师中间态作输入确实把 DMD2 身份从 0.310 拉到 0.348–0.363(9/10 正向,p 0.09–0.16),且 x_t(801)≥ x_t(601)≈ x_t(401)——结构越"像单位噪声"越好,与"query 只需低频结构、不需要更多信号"一致,支持本文;但给了教师结构后 DMD2 仍比教师终值低 0.037(p=0.012,2/10),基线差距 0.074 只回收一半,OPAD 的"映射丢失"在剩下一半里仍可能成立。**seed 一致性检验无效**:所有学生与同 seed 教师的 DINO 余弦(0.72–0.75)与教师不同 seed 之间(0.74)无差别,DINO 对同 prompt 肖像不敏感,不能测耦合;LCM 0.51 是因为其输出无脸。若论文要用 D2,需要 30 身份(D1 再跑 2 h)和 LPIPS。
