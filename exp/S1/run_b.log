@@ -1,0 +1,19 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/223 [00:00<?, ?it/s]Loading weights:  63%|██████▎   | 141/223 [00:00<00:00, 1327.71it/s]Loading weights: 100%|██████████| 223/223 [00:00<00:00, 996.80it/s] 
+/workspace/venv/lib/python3.12/site-packages/insightface/utils/face_align.py:23: FutureWarning: `estimate` is deprecated since version 0.26 and will be removed in version 2.2. Please use `SimilarityTransform.from_estimate` class constructor instead.
+  tform.estimate(lmk, dst)
+/workspace/venv/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py:205: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `hf_hub_download`. Downloading to a local directory does not use symlinks anymore.
+  warnings.warn(
+hyper 15 {'n': 200, 'dz': 194.5642872238159, 'de': 8.867457084655761, 'ratio': 21.93911620275925, 'gnorm': 236.6609188079834}
+hyper 25 {'n': 200, 'dz': 217.26892272949217, 'de': 14.703931493759155, 'ratio': 14.777211665405902, 'gnorm': 236.6609188079834}
+hyper 35 {'n': 200, 'dz': 233.57936763763428, 'de': 20.428536777496337, 'ratio': 11.433868343520782, 'gnorm': 236.6609188079834}
+hyper 45 {'n': 200, 'dz': 244.50330184936524, 'de': 25.997720441818238, 'ratio': 9.40532744752221, 'gnorm': 236.6609188079834}
+hyper 60 {'n': 200, 'dz': 253.55128692626954, 'de': 33.96756031036377, 'ratio': 7.464606679738766, 'gnorm': 236.6609188079834}
+hyper 75 {'n': 200, 'dz': 258.5552194213867, 'de': 41.3562816619873, 'ratio': 6.252379729559466, 'gnorm': 236.6609188079834}
+dmd2 45 {'n': 200, 'dz': 251.61661994934082, 'de': 25.997659387588502, 'ratio': 9.676295138574222, 'gnorm': 212.73204650878907}
+lcm_lora_999 {'n': 200, 'dz': 246.76691444396974, 'de': 25.997659387588502, 'ratio': 9.488861800128038, 'gnorm': 169.1294094848633}
+hyper_lora_999 {'n': 200, 'dz': 310.0592362976074, 'de': 25.997659387588502, 'ratio': 11.92516547782372, 'gnorm': 227.752162399292}
+tcd_lora_999 {'n': 200, 'dz': 257.33601531982424, 'de': 25.997659387588502, 'ratio': 9.895962809386402, 'gnorm': 168.99124164581298}
+dmd2_4s_999 {'n': 200, 'dz': 280.8154330444336, 'de': 25.997659387588502, 'ratio': 10.801056310798096, 'gnorm': 208.2746868133545}
+dmd2_1s_999 None
+DONE
