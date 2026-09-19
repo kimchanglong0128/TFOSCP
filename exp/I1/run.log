@@ -1,0 +1,86 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/223 [00:00<?, ?it/s]Loading weights:  63%|██████▎   | 140/223 [00:00<00:00, 1387.86it/s]Loading weights: 100%|██████████| 223/223 [00:00<00:00, 1224.24it/s]
+/workspace/venv/lib/python3.12/site-packages/insightface/utils/face_align.py:23: FutureWarning: `estimate` is deprecated since version 0.26 and will be removed in version 2.2. Please use `SimilarityTransform.from_estimate` class constructor instead.
+  tform.estimate(lmk, dst)
+id00 {'base': 0.335, 'gain15': -0.03, 'gain25': 0.041, 'dmd_cstd': 0.121, 'dmd_sstd': 0.126, 'hyp_cstd': 0.041, 'yaw': -0.989, 'ref_area': 0.414, 'sex': 1, 'age': 24}
+id01 {'base': 0.293, 'gain15': -0.009, 'gain25': 0.026, 'dmd_cstd': 0.127, 'dmd_sstd': 0.121, 'hyp_cstd': 0.054, 'yaw': 5.051, 'ref_area': 0.4, 'sex': 1, 'age': 49}
+id02 {'base': 0.352, 'gain15': -0.035, 'gain25': 0.02, 'dmd_cstd': 0.125, 'dmd_sstd': 0.1, 'hyp_cstd': 0.037, 'yaw': 1.594, 'ref_area': 0.386, 'sex': 0, 'age': 40}
+id03 {'base': 0.248, 'gain15': 0.044, 'gain25': 0.065, 'dmd_cstd': 0.141, 'dmd_sstd': 0.133, 'hyp_cstd': 0.041, 'yaw': 10.341, 'ref_area': 0.364, 'sex': 1, 'age': 60}
+id04 {'base': 0.376, 'gain15': 0.043, 'gain25': 0.035, 'dmd_cstd': 0.164, 'dmd_sstd': 0.097, 'hyp_cstd': 0.051, 'yaw': -55.138, 'ref_area': 0.444, 'sex': 1, 'age': 30}
+id05 {'base': 0.273, 'gain15': -0.009, 'gain25': -0.01, 'dmd_cstd': 0.152, 'dmd_sstd': 0.107, 'hyp_cstd': 0.045, 'yaw': 9.656, 'ref_area': 0.421, 'sex': 1, 'age': 50}
+id06 {'base': 0.36, 'gain15': 0.001, 'gain25': -0.018, 'dmd_cstd': 0.121, 'dmd_sstd': 0.147, 'hyp_cstd': 0.051, 'yaw': 7.484, 'ref_area': 0.436, 'sex': 1, 'age': 60}
+id07 {'base': 0.419, 'gain15': 0.027, 'gain25': -0.004, 'dmd_cstd': 0.199, 'dmd_sstd': 0.127, 'hyp_cstd': 0.057, 'yaw': 7.432, 'ref_area': 0.351, 'sex': 0, 'age': 30}
+id08 {'base': 0.323, 'gain15': 0.066, 'gain25': 0.057, 'dmd_cstd': 0.145, 'dmd_sstd': 0.151, 'hyp_cstd': 0.039, 'yaw': 1.699, 'ref_area': 0.435, 'sex': 1, 'age': 29}
+id09 {'base': 0.394, 'gain15': -0.126, 'gain25': 0.01, 'dmd_cstd': 0.193, 'dmd_sstd': 0.138, 'hyp_cstd': 0.046, 'yaw': 10.188, 'ref_area': 0.407, 'sex': 1, 'age': 29}
+id10 {'base': 0.305, 'gain15': -0.041, 'gain25': -0.057, 'dmd_cstd': 0.226, 'dmd_sstd': 0.136, 'hyp_cstd': 0.069, 'yaw': 60.151, 'ref_area': 0.43, 'sex': 1, 'age': 60}
+id11 {'base': 0.254, 'gain15': 0.033, 'gain25': 0.012, 'dmd_cstd': 0.148, 'dmd_sstd': 0.153, 'hyp_cstd': 0.036, 'yaw': -18.935, 'ref_area': 0.358, 'sex': 1, 'age': 65}
+id12 {'base': 0.152, 'gain15': 0.13, 'gain25': 0.152, 'dmd_cstd': 0.124, 'dmd_sstd': 0.114, 'hyp_cstd': 0.047, 'yaw': -80.498, 'ref_area': 0.367, 'sex': 1, 'age': 44}
+id13 {'base': 0.393, 'gain15': 0.13, 'gain25': 0.102, 'dmd_cstd': 0.153, 'dmd_sstd': 0.155, 'hyp_cstd': 0.048, 'yaw': 1.087, 'ref_area': 0.45, 'sex': 1, 'age': 27}
+id14 {'base': 0.213, 'gain15': 0.173, 'gain25': 0.202, 'dmd_cstd': 0.16, 'dmd_sstd': 0.161, 'hyp_cstd': 0.056, 'yaw': -0.181, 'ref_area': 0.405, 'sex': 0, 'age': 52}
+id15 {'base': 0.429, 'gain15': 0.051, 'gain25': 0.097, 'dmd_cstd': 0.141, 'dmd_sstd': 0.13, 'hyp_cstd': 0.047, 'yaw': 18.511, 'ref_area': 0.344, 'sex': 0, 'age': 24}
+id16 {'base': 0.289, 'gain15': 0.096, 'gain25': 0.225, 'dmd_cstd': 0.18, 'dmd_sstd': 0.101, 'hyp_cstd': 0.044, 'yaw': -28.174, 'ref_area': 0.476, 'sex': 0, 'age': 30}
+id17 {'base': 0.266, 'gain15': 0.062, 'gain25': 0.065, 'dmd_cstd': 0.14, 'dmd_sstd': 0.12, 'hyp_cstd': 0.051, 'yaw': 6.974, 'ref_area': 0.446, 'sex': 0, 'age': 26}
+id18 {'base': 0.304, 'gain15': -0.014, 'gain25': 0.038, 'dmd_cstd': 0.128, 'dmd_sstd': 0.129, 'hyp_cstd': 0.038, 'yaw': -14.609, 'ref_area': 0.493, 'sex': 1, 'age': 54}
+id19 {'base': 0.494, 'gain15': 0.033, 'gain25': 0.066, 'dmd_cstd': 0.135, 'dmd_sstd': 0.13, 'hyp_cstd': 0.042, 'yaw': 32.209, 'ref_area': 0.437, 'sex': 0, 'age': 26}
+id20 {'base': 0.317, 'gain15': 0.067, 'gain25': 0.074, 'dmd_cstd': 0.156, 'dmd_sstd': 0.159, 'hyp_cstd': 0.051, 'yaw': -4.547, 'ref_area': 0.456, 'sex': 0, 'age': 40}
+id21 {'base': 0.3, 'gain15': 0.054, 'gain25': 0.03, 'dmd_cstd': 0.156, 'dmd_sstd': 0.122, 'hyp_cstd': 0.033, 'yaw': -5.566, 'ref_area': 0.478, 'sex': 1, 'age': 61}
+id22 {'base': 0.423, 'gain15': 0.04, 'gain25': 0.066, 'dmd_cstd': 0.186, 'dmd_sstd': 0.169, 'hyp_cstd': 0.047, 'yaw': -5.188, 'ref_area': 0.357, 'sex': 1, 'age': 24}
+id23 {'base': 0.389, 'gain15': 0.08, 'gain25': 0.09, 'dmd_cstd': 0.163, 'dmd_sstd': 0.091, 'hyp_cstd': 0.054, 'yaw': -0.95, 'ref_area': 0.396, 'sex': 0, 'age': 28}
+id24 {'base': 0.337, 'gain15': 0.082, 'gain25': 0.127, 'dmd_cstd': 0.133, 'dmd_sstd': 0.115, 'hyp_cstd': 0.054, 'yaw': -32.434, 'ref_area': 0.458, 'sex': 0, 'age': 24}
+id25 {'base': 0.318, 'gain15': 0.086, 'gain25': 0.138, 'dmd_cstd': 0.126, 'dmd_sstd': 0.138, 'hyp_cstd': 0.047, 'yaw': -38.584, 'ref_area': 0.466, 'sex': 0, 'age': 35}
+id26 {'base': 0.314, 'gain15': 0.076, 'gain25': 0.082, 'dmd_cstd': 0.161, 'dmd_sstd': 0.155, 'hyp_cstd': 0.052, 'yaw': 18.542, 'ref_area': 0.406, 'sex': 0, 'age': 36}
+id27 {'base': 0.191, 'gain15': 0.026, 'gain25': 0.043, 'dmd_cstd': 0.171, 'dmd_sstd': 0.076, 'hyp_cstd': 0.051, 'yaw': 11.056, 'ref_area': 0.396, 'sex': 1, 'age': 52}
+id28 {'base': 0.491, 'gain15': 0.049, 'gain25': 0.038, 'dmd_cstd': 0.17, 'dmd_sstd': 0.12, 'hyp_cstd': 0.043, 'yaw': 13.406, 'ref_area': 0.424, 'sex': 1, 'age': 25}
+id29 {'base': 0.283, 'gain15': 0.026, 'gain25': 0.043, 'dmd_cstd': 0.19, 'dmd_sstd': 0.043, 'hyp_cstd': 0.048, 'yaw': -0.031, 'ref_area': 0.405, 'sex': 0, 'age': 41}
+
+== predictors of the DMD2 gain (Spearman) ==
+base       vs gain15     rho -0.11 p 0.559 (n=30)
+dmd_cstd   vs gain15     rho -0.04 p 0.851 (n=30)
+dmd_sstd   vs gain15     rho +0.16 p 0.384 (n=30)
+dmd_size   vs gain15     rho +0.02 p 0.936 (n=30)
+dmd_det    vs gain15     rho -0.27 p 0.152 (n=30)
+yaw        vs gain15     rho -0.38 p 0.039 (n=30)
+pitch      vs gain15     rho -0.17 p 0.383 (n=30)
+ref_area   vs gain15     rho +0.21 p 0.264 (n=30)
+age        vs gain15     rho -0.22 p 0.232 (n=30)
+sex        vs gain15     rho -0.38 p 0.0358 (n=30)
+base       vs gain25     rho -0.08 p 0.677 (n=30)
+dmd_cstd   vs gain25     rho -0.12 p 0.54 (n=30)
+dmd_sstd   vs gain25     rho +0.09 p 0.618 (n=30)
+dmd_size   vs gain25     rho -0.07 p 0.706 (n=30)
+dmd_det    vs gain25     rho -0.27 p 0.152 (n=30)
+yaw        vs gain25     rho -0.35 p 0.0601 (n=30)
+pitch      vs gain25     rho -0.10 p 0.613 (n=30)
+ref_area   vs gain25     rho +0.12 p 0.523 (n=30)
+age        vs gain25     rho -0.40 p 0.0265 (n=30)
+sex        vs gain25     rho -0.49 p 0.00558 (n=30)
+base       vs gain_mean  rho +0.01 p 0.949 (n=30)
+dmd_cstd   vs gain_mean  rho +0.10 p 0.588 (n=30)
+dmd_sstd   vs gain_mean  rho -0.04 p 0.847 (n=30)
+dmd_size   vs gain_mean  rho -0.17 p 0.381 (n=30)
+dmd_det    vs gain_mean  rho +0.05 p 0.778 (n=30)
+yaw        vs gain_mean  rho -0.23 p 0.219 (n=30)
+pitch      vs gain_mean  rho -0.13 p 0.478 (n=30)
+ref_area   vs gain_mean  rho +0.09 p 0.633 (n=30)
+age        vs gain_mean  rho -0.32 p 0.0802 (n=30)
+sex        vs gain_mean  rho -0.48 p 0.00756 (n=30)
+
+== Hyper-SD gain ==
+hyp_base   vs hyp_gain45 rho -0.17 p 0.375 (n=30)
+hyp_cstd   vs hyp_gain45 rho -0.24 p 0.201 (n=30)
+hyp_sstd   vs hyp_gain45 rho -0.19 p 0.306 (n=30)
+base       vs hyp_gain45 rho -0.36 p 0.0515 (n=30)
+gain15     vs hyp_gain45 rho +0.50 p 0.00474 (n=30)
+hyp_base   vs hyp_gain75 rho -0.16 p 0.384 (n=30)
+hyp_cstd   vs hyp_gain75 rho -0.18 p 0.345 (n=30)
+hyp_sstd   vs hyp_gain75 rho -0.14 p 0.449 (n=30)
+base       vs hyp_gain75 rho -0.33 p 0.0733 (n=30)
+gain15     vs hyp_gain75 rho +0.46 p 0.0108 (n=30)
+
+== per-model structure dispersion (mean over 30 ids) ==
+dmd2_399        centre-std 0.1546  size-std 0.1255  det 1.00
+hyper_unet_800  centre-std 0.0474  size-std 0.0493  det 1.00
+hyper_lora_999  centre-std 0.0497  size-std nan  det 1.00
+lcm_lora_999    centre-std 0.0802  size-std nan  det 0.98
+dmd2 vs hyper centre-std paired t p = 5.3197729494673536e-21 wilcoxon p = 1.862645149230957e-09
+DONE

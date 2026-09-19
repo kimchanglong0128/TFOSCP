@@ -715,3 +715,32 @@ g. **假设成立**:11 行里只有 rot45 同时满足"显著(p<0.001)+ 墨镜/�
 **被否定/无效的**:身份经低频进入(主体否定,仅小量);H1 范数热图与注意力聚焦(均匀);SDEdit 起点(复制源);噪声选择;seed 一致性(DINO 不敏感);迭代身份优化作为上界(没立起来);平均脸源在 Hyper-SD(负)。
 
 **下一步(需用户决定)**:(1) Hyper-UNet-800 是否作为"适用条件"写进论文而不再攻;(2) D2 扩到 30 身份 + LPIPS;(3) 终表协议(≥50 身份、≥40 prompt、CurricularFace、FastFace/SwiftPie 基线);(4) 面谈 9/21 用 B1b/T1/R1 三张图讲机制。
+
+# 第七轮:继续优化(2026-09-19)
+
+## I1 · 身份依赖性分析(纯后处理;`exp/I1/run.py`,`rows.json`)
+a. **假设**:每个身份的增益与其 1 步基线的脸框离散度(20 seed 的框中心/尺寸标准差)正相关、与基线 ArcFace 负相关;Hyper-UNet-800 的脸框离散度低于 DMD2-399(可作"缺结构"的逐模型测量)。
+b. [严格] 30 身份,增益取 B1(A−step1)、R1(ρ0.25−step1)、B1(平均脸−step1)、B2(Hyper θ45/θ75);预测量:基线 ArcFace、框离散度、检出率、参考图的性别/年龄/偏航/俯仰/脸占比(insightface);Spearman。[近似] 性别年龄由 insightface 估计。
+c. `exp/I1/run.py`。修 bug 0 轮。
+e. **原样(节选,全表在 run.log)**:
+```
+dmd_cstd   vs gain25     rho -0.12 p 0.54 (n=30)
+base       vs gain25     rho -0.08 p 0.677 (n=30)
+yaw        vs gain15     rho -0.38 p 0.039 (n=30)
+age        vs gain25     rho -0.40 p 0.0265 (n=30)
+sex        vs gain25     rho -0.49 p 0.00558 (n=30)      # sex=1 male
+sex        vs gain_mean  rho -0.48 p 0.00756 (n=30)
+gain15     vs hyp_gain45 rho +0.50 p 0.00474 (n=30)
+dmd2_399        centre-std 0.1546  size-std 0.1255  det 1.00
+hyper_unet_800  centre-std 0.0474  size-std 0.0493  det 1.00
+hyper_lora_999  centre-std 0.0497  size-std nan  det 1.00
+lcm_lora_999    centre-std 0.0802  size-std nan  det 0.98
+dmd2 vs hyper centre-std paired t p = 5.3e-21 wilcoxon p = 1.9e-09
+male   n=17 base 0.319 gain15 +0.023 gain25 +0.037 gain_mean +0.031 hyp_gain45 -0.003 age 44 |yaw| 18.3
+female n=13 base 0.340 gain15 +0.063 gain25 +0.094 gain_mean +0.087 hyp_gain45 +0.022 age 33 |yaw| 14.6
+gain25 male vs female Mann-Whitney p = 0.0084 | gain15 p = 0.040 | base by sex p = 0.53
+young(<36) n=15 gain25 +0.077 | old n=15 gain25 +0.047 p=0.106
+first 12 ids: male fraction 0.83 | last 18: 0.39
+M1 gain by sex: sunglasses male +0.050 female +0.087 (p=0.18); hat +0.015/+0.072 (p=0.007); beard +0.037/+0.017 (p=0.30); smile +0.042/+0.058 (p=0.53); neutral +0.053/+0.097 (p=0.054)
+```
+g. **假设被否定,但找到了真正的预测量**:框离散度与增益无关(rho −0.12);**性别是最强预测量**——女性身份的增益是男性的 2.5–3 倍(ρ0.25:+0.094 vs +0.037,p=0.008),平均脸源同样(+0.087 vs +0.031),Hyper-SD 上也同向(+0.022 vs −0.003),5 个 prompt 里 4 个同向(中性 prompt 也是),所以不是墨镜/眼带的特例;年龄、偏航为次要(与性别混淆:女性样本更年轻、更正面)。基线 ArcFace 不随性别变(p=0.53),即不是"男性已经够高"。N1/N2 中间结果的"前 12 个身份无增益"正是因为该子集 83% 男性。此外 DMD2-399 的 1 步构图离散度是 Hyper-UNet-800 的 3 倍(0.155 vs 0.047,p=5e-21),但 Hyper-LoRA-999 同样低(0.050)却有增益,故离散度不是"缺结构"的度量(它测的是多样性:DMD 高、一致性蒸馏低)。DMD2 与 Hyper 的逐身份增益相关 0.50——身份依赖性是身份(或适配器对该身份)的性质,不是生成器的。**待查**:性别效应在源侧(平均脸偏女性)还是目标侧 → I2(性别匹配的平均脸源)。
