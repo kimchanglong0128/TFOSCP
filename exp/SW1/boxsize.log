@@ -1,0 +1,9 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/223 [00:00<?, ?it/s]Loading weights:  47%|████▋     | 105/223 [00:00<00:00, 1049.79it/s]Loading weights:  94%|█████████▍| 210/223 [00:00<00:00, 972.19it/s] Loading weights: 100%|██████████| 223/223 [00:00<00:00, 1040.75it/s]
+/workspace/venv/lib/python3.12/site-packages/insightface/utils/face_align.py:23: FutureWarning: `estimate` is deprecated since version 0.26 and will be removed in version 2.2. Please use `SimilarityTransform.from_estimate` class constructor instead.
+  tform.estimate(lmk, dst)
+step1 {'box_area_frac': 0.3988748359680176, 'n': 200, 'undetected': 0}
+global_rho0.25 {'box_area_frac': 0.452531008720398, 'n': 200, 'undetected': 0}
+windowed_rho0.25 {'box_area_frac': 0.43213501930236814, 'n': 200, 'undetected': 0}
+global_rho0.15 {'box_area_frac': 0.5681441688537597, 'n': 200, 'undetected': 0}
+DONE

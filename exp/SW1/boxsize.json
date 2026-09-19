@@ -1,0 +1,22 @@
+{
+ "step1": {
+  "box_area_frac": 0.3988748359680176,
+  "n": 200,
+  "undetected": 0
+ },
+ "global_rho0.25": {
+  "box_area_frac": 0.452531008720398,
+  "n": 200,
+  "undetected": 0
+ },
+ "windowed_rho0.25": {
+  "box_area_frac": 0.43213501930236814,
+  "n": 200,
+  "undetected": 0
+ },
+ "global_rho0.15": {
+  "box_area_frac": 0.5681441688537597,
+  "n": 200,
+  "undetected": 0
+ }
+}
