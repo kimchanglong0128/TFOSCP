@@ -766,3 +766,21 @@ all    mean_F  vs step1 Δ+0.0179 21/30 p=0.107
 matched vs mismatched mean face: {'delta': 0.03144794939706722, 'positive': 23, 'n': 30, 'p_t': 0.00011814548388982507}
 ```
 g. **一半成立**:(i) 源侧效应存在——性别匹配的平均脸比错配高 +0.031(23/30,p=1e-4);错配源对男性为负(−0.009),说明结构先验携带性别化的脸型,错配会与适配器身份冲突;全体平均脸偏女性(对女性 +0.038、对男性 +0.011)。(ii) 但**目标侧效应仍在**:即使完全匹配(参考脸 A 或匹配均脸),男性增益仍只有女性的 1/3(A:+0.023 vs +0.063;匹配均脸:+0.017 vs +0.054)。**方法改进**:无参考版本改为"按参考图性别选均脸"(insightface 零成本给出),全体增益 ≈+0.033(男 +0.017/女 +0.054),高于单一均脸的 +0.022,仍低于参考脸源的 +0.040。目标侧为何男性难,待查(下一步看预算曲线是否按性别分化)。
+
+## I3 · 性别差是度量的"原型效应"吗(纯分析;`exp/I3/run.py`)
+a. **假设**:女性参考在 ArcFace 空间彼此更相似,方法把输出推向"平均脸"就白赚分数;把同性原型方向投影掉后男女增益差消失。
+b. [严格] buffalo_l 嵌入;原型 = 留一的同性参考均值(归一);投影掉原型方向后再算余弦;B1 的 step1/A_ref 图像,30 身份 × 20 seed。
+c. `exp/I3/run.py`。修 bug 1 轮(json 不接受 float32;结果从日志解析,脚本已修)+ 1 次被我的超时误杀(非代码)。
+e. **原样**:
+```
+within-sex reference similarity (leave-self-out prototype cosine): male 0.018  female 0.030
+cross-sex prototype cosine of references: male 0.022  female 0.025
+male   gain to reference                Δ+0.0234 11/17 p=0.132  (level 0.318->0.341)
+male   gain to sex prototype            Δ-0.0002 9/17 p=0.956  (level 0.008->0.007)
+male   gain, prototype projected out    Δ+0.0234 10/17 p=0.133  (level 0.318->0.341)
+female gain to reference                Δ+0.0635 12/13 p=0.000421  (level 0.340->0.403)
+female gain to sex prototype            Δ+0.0145 9/13 p=0.13  (level 0.033->0.047)
+female gain, prototype projected out    Δ+0.0635 12/13 p=0.000367  (level 0.339->0.402)
+projected-out gain male vs female Mann-Whitney p = 0.036
+```
+g. **假设被否定**:参考与同性原型的余弦只有 0.02–0.03,方法几乎不把输出推向原型(男 −0.000,女 +0.015 不显著),投影掉原型后增益一字不变(男 +0.023、女 +0.064,差异 p=0.036)。性别差是**真实的目标侧差异**,不是度量伪影;论文可以放心用 ArcFace,但要报告按性别分层的结果。

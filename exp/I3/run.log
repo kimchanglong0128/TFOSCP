@@ -1,0 +1,53 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/223 [00:00<?, ?it/s]Loading weights:  54%|█████▍    | 120/223 [00:00<00:00, 1030.55it/s]Loading weights: 100%|██████████| 223/223 [00:00<00:00, 1061.23it/s]
+/workspace/venv/lib/python3.12/site-packages/insightface/utils/face_align.py:23: FutureWarning: `estimate` is deprecated since version 0.26 and will be removed in version 2.2. Please use `SimilarityTransform.from_estimate` class constructor instead.
+  tform.estimate(lmk, dst)
+within-sex reference similarity (leave-self-out prototype cosine): male 0.018  female 0.030
+cross-sex prototype cosine of references: male 0.022  female 0.025
+id00 M to-ref 0.333->0.304  to-proto -0.001->0.007  proto-projected-out 0.334->0.304
+id01 M to-ref 0.293->0.284  to-proto -0.000->-0.015  proto-projected-out 0.293->0.284
+id02 F to-ref 0.355->0.321  to-proto 0.044->0.089  proto-projected-out 0.358->0.328
+id03 M to-ref 0.244->0.289  to-proto 0.030->0.027  proto-projected-out 0.245->0.291
+id04 M to-ref 0.376->0.416  to-proto 0.022->-0.003  proto-projected-out 0.376->0.417
+id05 M to-ref 0.272->0.265  to-proto -0.014->-0.006  proto-projected-out 0.274->0.266
+id06 M to-ref 0.364->0.365  to-proto 0.008->0.031  proto-projected-out 0.365->0.364
+id07 F to-ref 0.417->0.444  to-proto 0.115->0.122  proto-projected-out 0.408->0.434
+id08 M to-ref 0.322->0.390  to-proto -0.020->-0.020  proto-projected-out 0.322->0.389
+id09 M to-ref 0.393->0.274  to-proto 0.060->0.076  proto-projected-out 0.393->0.274
+id10 M to-ref 0.305->0.267  to-proto -0.021->-0.009  proto-projected-out 0.307->0.268
+id11 M to-ref 0.253->0.287  to-proto -0.002->-0.024  proto-projected-out 0.253->0.287
+id12 M to-ref 0.154->0.290  to-proto -0.000->0.002  proto-projected-out 0.154->0.290
+id13 M to-ref 0.393->0.522  to-proto -0.004->-0.011  proto-projected-out 0.393->0.522
+id14 F to-ref 0.211->0.381  to-proto 0.038->0.077  proto-projected-out 0.209->0.379
+id15 F to-ref 0.429->0.479  to-proto 0.000->0.012  proto-projected-out 0.429->0.480
+id16 F to-ref 0.286->0.383  to-proto -0.009->-0.021  proto-projected-out 0.286->0.383
+id17 F to-ref 0.263->0.322  to-proto 0.003->-0.005  proto-projected-out 0.263->0.323
+id18 M to-ref 0.293->0.277  to-proto -0.017->0.013  proto-projected-out 0.292->0.278
+id19 F to-ref 0.497->0.527  to-proto 0.073->0.083  proto-projected-out 0.494->0.523
+id20 F to-ref 0.314->0.381  to-proto 0.041->0.073  proto-projected-out 0.314->0.382
+id21 M to-ref 0.295->0.346  to-proto -0.010->-0.006  proto-projected-out 0.295->0.347
+id22 M to-ref 0.421->0.460  to-proto 0.086->0.092  proto-projected-out 0.417->0.456
+id23 F to-ref 0.388->0.470  to-proto -0.011->0.048  proto-projected-out 0.388->0.472
+id24 F to-ref 0.341->0.424  to-proto 0.003->-0.013  proto-projected-out 0.342->0.425
+id25 F to-ref 0.315->0.398  to-proto 0.009->-0.040  proto-projected-out 0.317->0.397
+id26 F to-ref 0.317->0.397  to-proto 0.089->0.152  proto-projected-out 0.309->0.384
+id27 M to-ref 0.195->0.221  to-proto -0.021->-0.026  proto-projected-out 0.195->0.221
+id28 M to-ref 0.492->0.539  to-proto 0.034->-0.002  proto-projected-out 0.492->0.540
+id29 F to-ref 0.285->0.316  to-proto 0.030->0.037  proto-projected-out 0.285->0.317
+Traceback (most recent call last):
+  File "/workspace/exp/I3/run.py", line 26, in <module>
+    json.dump(rows, open('/workspace/exp/I3/rows.json', 'w'), indent=1)
+  File "/usr/lib/python3.12/json/__init__.py", line 179, in dump
+    for chunk in iterable:
+  File "/usr/lib/python3.12/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/usr/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/usr/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/usr/lib/python3.12/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type float32 is not JSON serializable
