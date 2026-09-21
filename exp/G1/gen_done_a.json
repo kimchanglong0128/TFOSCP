@@ -1,0 +1,182 @@
+{
+ "backpack": {
+  "cls": "backpack",
+  "n_refs": 6,
+  "theta0_pix_diff": 0,
+  "theta0_latent_rel": 0.0
+ },
+ "backpack_dog": {
+  "cls": "backpack",
+  "n_refs": 5,
+  "theta0_pix_diff": 0,
+  "theta0_latent_rel": 0.0
+ },
+ "bear_plushie": {
+  "cls": "stuffed animal",
+  "n_refs": 5,
+  "theta0_pix_diff": 0,
+  "theta0_latent_rel": 0.0
+ },
+ "berry_bowl": {
+  "cls": "bowl",
+  "n_refs": 6,
+  "theta0_pix_diff": 0,
+  "theta0_latent_rel": 0.0
+ },
+ "can": {
+  "cls": "can",
+  "n_refs": 6,
+  "theta0_pix_diff": 0,
+  "theta0_latent_rel": 0.0
+ },
+ "candle": {
+  "cls": "candle",
+  "n_refs": 5,
+  "theta0_pix_diff": 0,
+  "theta0_latent_rel": 0.0
+ },
+ "cat": {
+  "cls": "cat",
+  "n_refs": 5,
+  "theta0_pix_diff": 0,
+  "theta0_latent_rel": 0.0
+ },
+ "cat2": {
+  "cls": "cat",
+  "n_refs": 5,
+  "theta0_pix_diff": 0,
+  "theta0_latent_rel": 0.0
+ },
+ "clock": {
+  "cls": "clock",
+  "n_refs": 6,
+  "theta0_pix_diff": 0,
+  "theta0_latent_rel": 0.0
+ },
+ "colorful_sneaker": {
+  "cls": "sneaker",
+  "n_refs": 5,
+  "theta0_pix_diff": 0,
+  "theta0_latent_rel": 0.0
+ },
+ "dog": {
+  "cls": "dog",
+  "n_refs": 5,
+  "theta0_pix_diff": 0,
+  "theta0_latent_rel": 0.0
+ },
+ "dog2": {
+  "cls": "dog",
+  "n_refs": 6,
+  "theta0_pix_diff": 0,
+  "theta0_latent_rel": 0.0
+ },
+ "dog3": {
+  "cls": "dog",
+  "n_refs": 6,
+  "theta0_pix_diff": 0,
+  "theta0_latent_rel": 0.0
+ },
+ "dog5": {
+  "cls": "dog",
+  "n_refs": 5,
+  "theta0_pix_diff": 0,
+  "theta0_latent_rel": 0.0
+ },
+ "dog6": {
+  "cls": "dog",
+  "n_refs": 5,
+  "theta0_pix_diff": 0,
+  "theta0_latent_rel": 0.0
+ },
+ "dog7": {
+  "cls": "dog",
+  "n_refs": 5,
+  "theta0_pix_diff": 0,
+  "theta0_latent_rel": 0.0
+ },
+ "dog8": {
+  "cls": "dog",
+  "n_refs": 5,
+  "theta0_pix_diff": 0,
+  "theta0_latent_rel": 0.0
+ },
+ "duck_toy": {
+  "cls": "toy",
+  "n_refs": 4,
+  "theta0_pix_diff": 0,
+  "theta0_latent_rel": 0.0
+ },
+ "fancy_boot": {
+  "cls": "boot",
+  "n_refs": 6,
+  "theta0_pix_diff": 0,
+  "theta0_latent_rel": 0.0
+ },
+ "grey_sloth_plushie": {
+  "cls": "stuffed animal",
+  "n_refs": 5,
+  "theta0_pix_diff": 0,
+  "theta0_latent_rel": 0.0
+ },
+ "monster_toy": {
+  "cls": "toy",
+  "n_refs": 5,
+  "theta0_pix_diff": 0,
+  "theta0_latent_rel": 0.0
+ },
+ "pink_sunglasses": {
+  "cls": "glasses",
+  "n_refs": 6,
+  "theta0_pix_diff": 0,
+  "theta0_latent_rel": 0.0
+ },
+ "poop_emoji": {
+  "cls": "toy",
+  "n_refs": 5,
+  "theta0_pix_diff": 0,
+  "theta0_latent_rel": 0.0
+ },
+ "rc_car": {
+  "cls": "toy",
+  "n_refs": 5,
+  "theta0_pix_diff": 0,
+  "theta0_latent_rel": 0.0
+ },
+ "red_cartoon": {
+  "cls": "cartoon",
+  "n_refs": 4,
+  "theta0_pix_diff": 0,
+  "theta0_latent_rel": 0.0
+ },
+ "robot_toy": {
+  "cls": "toy",
+  "n_refs": 5,
+  "theta0_pix_diff": 0,
+  "theta0_latent_rel": 0.0
+ },
+ "shiny_sneaker": {
+  "cls": "sneaker",
+  "n_refs": 6,
+  "theta0_pix_diff": 0,
+  "theta0_latent_rel": 0.0
+ },
+ "teapot": {
+  "cls": "teapot",
+  "n_refs": 5,
+  "theta0_pix_diff": 0,
+  "theta0_latent_rel": 0.0
+ },
+ "vase": {
+  "cls": "vase",
+  "n_refs": 6,
+  "theta0_pix_diff": 0,
+  "theta0_latent_rel": 0.0
+ },
+ "wolf_plushie": {
+  "cls": "stuffed animal",
+  "n_refs": 5,
+  "theta0_pix_diff": 0,
+  "theta0_latent_rel": 0.0
+ }
+}

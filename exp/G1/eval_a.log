@@ -1,0 +1,60 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/223 [00:00<?, ?it/s]Loading weights:  66%|██████▌   | 147/223 [00:00<00:00, 1438.21it/s]Loading weights: 100%|██████████| 223/223 [00:00<00:00, 1316.57it/s]
+/workspace/venv/lib/python3.12/site-packages/insightface/utils/face_align.py:23: FutureWarning: `estimate` is deprecated since version 0.26 and will be removed in version 2.2. Please use `SimilarityTransform.from_estimate` class constructor instead.
+  tform.estimate(lmk, dst)
+Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]Loading weights: 100%|██████████| 398/398 [00:00<00:00, 73818.56it/s]
+Loading weights:   0%|          | 0/198 [00:00<?, ?it/s]Loading weights: 100%|██████████| 198/198 [00:00<00:00, 59400.06it/s]
+backpack             obj  DINO 0.541->0.561 held-out 0.540->0.518 CLIP-I 0.861->0.810 CLIP-T 0.309->0.291
+backpack_dog         obj  DINO 0.529->0.572 held-out 0.504->0.542 CLIP-I 0.760->0.767 CLIP-T 0.302->0.278
+bear_plushie         obj  DINO 0.758->0.735 held-out 0.757->0.717 CLIP-I 0.789->0.789 CLIP-T 0.309->0.309
+berry_bowl           obj  DINO 0.820->0.872 held-out 0.812->0.862 CLIP-I 0.841->0.865 CLIP-T 0.247->0.234
+can                  obj  DINO 0.668->0.743 held-out 0.654->0.714 CLIP-I 0.730->0.761 CLIP-T 0.310->0.294
+candle               obj  DINO 0.497->0.549 held-out 0.441->0.491 CLIP-I 0.735->0.776 CLIP-T 0.321->0.319
+cat                  live DINO 0.796->0.804 held-out 0.778->0.784 CLIP-I 0.894->0.914 CLIP-T 0.283->0.276
+cat2                 live DINO 0.772->0.783 held-out 0.755->0.764 CLIP-I 0.886->0.875 CLIP-T 0.263->0.228
+clock                obj  DINO 0.568->0.534 held-out 0.534->0.464 CLIP-I 0.796->0.812 CLIP-T 0.268->0.260
+colorful_sneaker     obj  DINO 0.750->0.773 held-out 0.724->0.741 CLIP-I 0.803->0.827 CLIP-T 0.300->0.278
+dog                  live DINO 0.717->0.811 held-out 0.705->0.788 CLIP-I 0.884->0.906 CLIP-T 0.272->0.257
+dog2                 live DINO 0.697->0.760 held-out 0.677->0.736 CLIP-I 0.879->0.898 CLIP-T 0.272->0.255
+dog3                 live DINO 0.611->0.629 held-out 0.569->0.575 CLIP-I 0.849->0.866 CLIP-T 0.284->0.263
+dog5                 live DINO 0.718->0.768 held-out 0.696->0.740 CLIP-I 0.794->0.875 CLIP-T 0.264->0.238
+dog6                 live DINO 0.804->0.849 held-out 0.795->0.837 CLIP-I 0.873->0.892 CLIP-T 0.247->0.228
+dog7                 live DINO 0.721->0.755 held-out 0.692->0.721 CLIP-I 0.867->0.873 CLIP-T 0.275->0.262
+dog8                 live DINO 0.675->0.743 held-out 0.651->0.717 CLIP-I 0.862->0.873 CLIP-T 0.276->0.251
+duck_toy             obj  DINO 0.754->0.783 held-out 0.708->0.733 CLIP-I 0.866->0.887 CLIP-T 0.241->0.229
+fancy_boot           obj  DINO 0.569->0.678 held-out 0.549->0.649 CLIP-I 0.815->0.867 CLIP-T 0.293->0.268
+grey_sloth_plushie   obj  DINO 0.714->0.725 held-out 0.692->0.697 CLIP-I 0.795->0.789 CLIP-T 0.308->0.283
+monster_toy          obj  DINO 0.637->0.660 held-out 0.606->0.619 CLIP-I 0.764->0.796 CLIP-T 0.258->0.242
+pink_sunglasses      obj  DINO 0.657->0.736 held-out 0.631->0.705 CLIP-I 0.871->0.882 CLIP-T 0.287->0.270
+poop_emoji           obj  DINO 0.719->0.741 held-out 0.681->0.700 CLIP-I 0.863->0.866 CLIP-T 0.256->0.256
+rc_car               obj  DINO 0.645->0.686 held-out 0.620->0.651 CLIP-I 0.783->0.809 CLIP-T 0.292->0.274
+red_cartoon          obj  DINO 0.623->0.715 held-out 0.625->0.710 CLIP-I 0.857->0.903 CLIP-T 0.256->0.226
+robot_toy            obj  DINO 0.634->0.683 held-out 0.608->0.642 CLIP-I 0.832->0.849 CLIP-T 0.263->0.240
+shiny_sneaker        obj  DINO 0.733->0.787 held-out 0.720->0.775 CLIP-I 0.772->0.826 CLIP-T 0.325->0.298
+teapot               obj  DINO 0.527->0.520 held-out 0.456->0.440 CLIP-I 0.859->0.853 CLIP-T 0.283->0.269
+vase                 obj  DINO 0.601->0.652 held-out 0.571->0.607 CLIP-I 0.820->0.855 CLIP-T 0.275->0.260
+wolf_plushie         obj  DINO 0.650->0.692 held-out 0.628->0.663 CLIP-I 0.770->0.825 CLIP-T 0.330->0.305
+all      n=30 dino            0.6702 -> 0.7099  Δ+0.0397 SE 0.0060 p_t 3.01e-07 p_w 1.19e-06 27/30
+all      n=30 dino_heldout    0.6460 -> 0.6767  Δ+0.0307 SE 0.0068 p_t 9.94e-05 p_w 0.000137 26/30
+all      n=30 dino_used       0.7725 -> 0.8527  Δ+0.0802 SE 0.0088 p_t 5.26e-10 p_w 1.86e-09 30/30
+all      n=30 clip_i          0.8256 -> 0.8461  Δ+0.0205 SE 0.0045 p_t 7.84e-05 p_w 2.37e-05 26/30
+all      n=30 clip_i_heldout  0.8147 -> 0.8318  Δ+0.0171 SE 0.0046 p_t 0.000892 p_w 0.000283 25/30
+all      n=30 clip_t          0.2823 -> 0.2647  Δ-0.0176 SE 0.0016 p_t 5.84e-12 p_w 9.31e-09 2/30
+objects  n=21 dino            0.6474 -> 0.6856  Δ+0.0382 SE 0.0077 p_t 7.28e-05 p_w 0.000197 18/21
+objects  n=21 dino_heldout    0.6220 -> 0.6494  Δ+0.0274 SE 0.0089 p_t 0.00592 p_w 0.0071 17/21
+objects  n=21 dino_used       0.7539 -> 0.8403  Δ+0.0864 SE 0.0114 p_t 2.75e-07 p_w 9.54e-07 21/21
+objects  n=21 clip_i          0.8086 -> 0.8292  Δ+0.0206 SE 0.0054 p_t 0.00112 p_w 0.000852 18/21
+objects  n=21 clip_i_heldout  0.7970 -> 0.8138  Δ+0.0168 SE 0.0058 p_t 0.00902 p_w 0.00628 17/21
+objects  n=21 clip_t          0.2873 -> 0.2706  Δ-0.0168 SE 0.0019 p_t 3.13e-08 p_w 4.77e-06 2/21
+live     n= 9 dino            0.7234 -> 0.7669  Δ+0.0434 SE 0.0095 p_t 0.00185 p_w 0.00391 9/9
+live     n= 9 dino_heldout    0.7021 -> 0.7403  Δ+0.0383 SE 0.0093 p_t 0.00337 p_w 0.00391 9/9
+live     n= 9 dino_used       0.8158 -> 0.8815  Δ+0.0658 SE 0.0118 p_t 0.000518 p_w 0.00391 9/9
+live     n= 9 clip_i          0.8654 -> 0.8857  Δ+0.0204 SE 0.0084 p_t 0.041 p_w 0.0195 8/9
+live     n= 9 clip_i_heldout  0.8561 -> 0.8739  Δ+0.0177 SE 0.0078 p_t 0.0516 p_w 0.0273 8/9
+live     n= 9 clip_t          0.2705 -> 0.2510  Δ-0.0195 SE 0.0028 p_t 0.000124 p_w 0.00391 0/9
+CLIP-T  a {} in the jungle               Δ-0.0133 p_t 6.02e-07
+CLIP-T  a {} in the snow                 Δ-0.0275 p_t 5.38e-09
+CLIP-T  a {} on the beach                Δ-0.0173 p_t 2.42e-07
+CLIP-T  a {} on a cobblestone street     Δ-0.0177 p_t 7.05e-07
+CLIP-T  a {} on top of pink fabric       Δ-0.0120 p_t 0.000276
+DONE
